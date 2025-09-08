@@ -1,6 +1,7 @@
 import "./globals.css";
 import type { ReactNode } from "react";
 import { Inter } from "next/font/google";  
+import CursorGlow from "@/components/CursorGlow";
 
 // Configure the font
 const inter = Inter({
@@ -16,7 +17,8 @@ export const metadata = {
 export default function RootLayout({ children }: { children: ReactNode }) {
   return (
     <html lang="en" className={`${inter.variable} scroll-smooth`}>
-      <body className="font-sans bg-bg text-copy antialiased">
+      <body className="font-sans bg-[#101522] text-[rgb(148,163,184)] antialiased">
+        <CursorGlow />   {/* <- here */}
         {children}
       </body>
     </html>
