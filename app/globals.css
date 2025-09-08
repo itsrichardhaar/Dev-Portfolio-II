@@ -1,14 +1,58 @@
 /* Tailwind v4 */
 @import "tailwindcss";
 
-/* (optional) your custom styles below */
+/* --- Type rhythm & link styling --- */
+:root {
+  --radius: 12px;
+}
+
+.prose {
+  line-height: 1.7;
+  letter-spacing: 0.005em;
+}
 .prose :where(a):not(:where(.not-prose *)) {
   text-decoration: underline;
-  text-underline-offset: 2px;
+  text-underline-offset: 3px;
+  text-decoration-thickness: 1px;
 }
-.prose :where(h2,h3):not(:where(.not-prose *)) {
-  scroll-margin-top: 80px;
+.prose :where(code):not(:where(.not-prose *)) {
+  font-size: 0.95em;
+  padding: 0.1em 0.35em;
+  border-radius: 6px;
+  background: color-mix(in oklab, currentColor 8%, transparent);
 }
+
+/* --- Focus ring (keyboard) --- */
+:where(a, button, [role="button"], input, select, textarea):focus-visible {
+  outline: 2px solid oklch(65% 0.12 260);
+  outline-offset: 2px;
+  border-radius: 8px;
+}
+
+/* --- Minimal scrollbar for the right column --- */
+.scrollport::-webkit-scrollbar {
+  width: 10px;
+}
+.scrollport::-webkit-scrollbar-thumb {
+  background: color-mix(in oklab, currentColor 15%, transparent);
+  border-radius: 999px;
+  border: 3px solid transparent;
+  background-clip: content-box;
+}
+.scrollport {
+  scrollbar-width: thin;
+  scrollbar-color: color-mix(in oklab, currentColor 20%, transparent) transparent;
+}
+
+/* --- Soft table polish --- */
+table th {
+  font-weight: 600;
+  letter-spacing: 0.01em;
+}
+table td, table th {
+  padding-block: 0.75rem;
+}
+
 
 @media (prefers-reduced-motion: reduce) {
   * {

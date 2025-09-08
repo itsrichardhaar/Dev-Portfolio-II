@@ -9,7 +9,7 @@ description: "Loosely designed in Figma and coded in Visual Studio Code by yours
 export default function RootLayout({ children }: { children: ReactNode }) {
 return (
 <html lang="en" className="scroll-smooth">
-<body className="bg-neutral-50 text-neutral-900 antialiased dark:bg-neutral-950 dark:text-neutral-200">
+<body className="bg-neutral-50 text-neutral-900 antialiased dark:bg-neutral-950 dark:text-neutral-200 lg:overflow-hidden">
 {children}
 </body>
 </html>

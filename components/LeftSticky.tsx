@@ -23,7 +23,7 @@ export default function LeftSticky({
           transition={{ duration: 0.6 }}
           className="text-4xl font-extrabold tracking-tight sm:text-5xl"
         >
-          Your Name
+          Richard Haar
         </motion.h1>
         <p className="mt-3 max-w-md text-lg text-neutral-600 dark:text-neutral-400">
           Front-end engineer building fast, accessible web apps.

@@ -52,18 +52,21 @@ export default function HomePage() {
   const featured = projects.filter((p) => p.featured);
 
   return (
-    <div className="mx-auto grid h-screen max-w-6xl grid-cols-1 gap-0 px-4 sm:px-6 lg:grid-cols-12 lg:gap-8">
+    <div className="mx-auto grid lg:h-screen max-w-6xl grid-cols-1 gap-0 px-4 sm:px-6 lg:grid-cols-12 lg:gap-8 lg:overflow-hidden">
       <aside className="lg:col-span-5 lg:py-16">
         <LeftSticky sections={sections} active={active} onNavClick={onNavClick} />
       </aside>
 
-      <main ref={scrollRef} className="lg:col-span-7 lg:h-screen lg:overflow-y-auto lg:py-16">
+      <main ref={scrollRef} className="scrollport relative lg:col-span-7 lg:h-screen lg:min-h-0 lg:overflow-y-auto lg:py-16 lg:pr-6">
         <div className="py-10 lg:py-0">
           {/* About */}
           <Section id="about" title="About">
             <p>
-              I’m a front-end engineer focusing on fast, accessible web apps. I enjoy React,
-              TypeScript, and motion that adds meaning.
+              I’m a senior web developer and marketing analyst with 6 years of experience 
+              in web application programming, digital marketing and brand development. 
+              I excel in cross-functional collaboration to provide innovative, high-quality products and services. 
+              My unique blend of technical expertise and analytical marketing insight enables me to enhance user-experience, 
+              optimize performance, and drive business growth across multi-channel marketing strategies and campaigns.
             </p>
             <p className="mt-4">
               I care about design systems, performance, and progressive enhancement.
