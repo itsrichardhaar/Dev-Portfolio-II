@@ -78,18 +78,27 @@ export default function HomePage() {
             <Timeline
               items={[
                 {
-                  role: "Senior Front-end Engineer",
-                  org: "Acme Corp",
-                  time: "2023 — Present",
+                  role: "Senior Web Developer",
+                  org: "Springer Studios",
+                  time: "2025 — Present",
                   bullets: [
                     "Rebuilt marketing site with Next.js; 95+ Core Web Vitals.",
                     "Authored component library used across product teams.",
                   ],
                 },
                 {
-                  role: "Front-end Engineer",
-                  org: "Startup XYZ",
-                  time: "2021 — 2023",
+                  role: "Web Developer",
+                  org: "Springer Studios",
+                  time: "2022 — 2025",
+                  bullets: [
+                    "Introduced design system and a11y audits.",
+                    "Shipped analytics dashboard with realtime data.",
+                  ],
+                },
+                {
+                  role: "Web Developer & Digital Marketing Specialist",
+                  org: "HighClick Media",
+                  time: "2019 — 2022",
                   bullets: [
                     "Introduced design system and a11y audits.",
                     "Shipped analytics dashboard with realtime data.",
@@ -114,7 +123,7 @@ export default function HomePage() {
             <div className="mt-8">
               <a
                 href="/archive"
-                className="text-sm font-medium text-neutral-700 underline-offset-4 hover:underline dark:text-neutral-300"
+                className="text-sm font-medium text-copy"
               >
                 View full project archive →
               </a>

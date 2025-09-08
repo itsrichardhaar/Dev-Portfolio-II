@@ -42,7 +42,7 @@ export default function ProjectPage({ params }: { params: { slug: string } }) {
       </Link>
 
       <header className="mt-4">
-        <h1 className="text-3xl font-bold tracking-tight">{p!.title}</h1>
+        <h1 className="text-heading text-4xl font-bold tracking-tight">{p!.title}</h1>
         <div className="mt-2 flex flex-wrap items-center gap-3 text-sm text-neutral-500">
           {p!.year ? <span>{p!.year}</span> : null}
           {p!.madeAt ? <span>• {p!.madeAt}</span> : null}

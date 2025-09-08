@@ -21,20 +21,17 @@ export default function LeftSticky({
           initial={{ opacity: 0, y: 10 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
-          className="text-4xl font-extrabold tracking-tight sm:text-5xl"
+          className="text-heading text-4xl font-bold tracking-tight sm:text-5xl"
         >
           Richard Haar
         </motion.h1>
         <p className="mt-3 max-w-md text-lg text-neutral-600 dark:text-neutral-400">
           Front-end engineer building fast, accessible web apps.
         </p>
-        <p className="mt-4 max-w-md text-neutral-600 dark:text-neutral-400">
-          Currently crafting delightful UX with React & TypeScript.
-        </p>
       </div>
 
       {/* Scrollspy nav */}
-      <nav className="mt-10 hidden lg:block">
+      <nav className="mt-0 hidden lg:block">
         <ul className="space-y-2">
           {sections.map((s) => (
             <li key={s.id}>

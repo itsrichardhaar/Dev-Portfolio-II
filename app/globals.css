@@ -1,6 +1,13 @@
 /* Tailwind v4 */
 @import "tailwindcss";
 
+@theme {
+  --color-bg: rgb(16, 21, 34);      /* deep navy background */
+  --color-heading: #ffffff;         /* white headings */
+  --color-copy: rgb(148, 163, 184); /* muted body text */
+}
+
+
 /* --- Type rhythm & link styling --- */
 :root {
   --radius: 12px;
