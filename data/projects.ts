@@ -48,6 +48,27 @@ export const projects: Project[] = [
     featured: true,
   },
   {
+    slug: "builtrite-storage-systems-website",
+    title: "BuiltRite Storage Systems Website",
+    year: 2025,
+    summary: "Built and deployed a new website for BuiltRite Storage Systems.",
+    madeAt: "Springer Studios",
+    builtWith: ["WordPress", "PHP", "JavaScript"],
+    link: "https://builtritestoragesystems.com",
+    featured: false,
+  },
+  {
+    slug: "cvcc-website-redesign",
+    title: "CVCC Website Redesign",
+    year: 2025,
+    summary:
+      "Built and deployed a full site redesign for Catawba Valley Community College.",
+    madeAt: "Springer Studios",
+    builtWith: ["WordPress" ,"PHP", "JavaScript", "mySQL"],
+    link: "https://cvcc.edu/programs-of-study/",
+    featured: false, // will only show on Archive
+  },
+  {
     slug: "cvcc-program-filter",
     title: "CVCC Programs of Study Filter",
     year: 2025,

@@ -42,7 +42,7 @@ export default function ProjectCard({ project }: { project: Project }) {
         {project.builtWith?.length ? (
           <ul className="mt-2 flex flex-wrap gap-2 text-xs text-neutral-500 dark:text-neutral-400">
             {project.builtWith.map((t) => (
-              <li key={t} className="rounded bg-neutral-100 px-2 py-0.5 dark:bg-neutral-900">
+              <li key={t} className="rounded-full bg-[rgba(45,212,191,0.1)] text-[rgb(94,234,212)] px-2 py-0.5 text-xs">
                 {t}
               </li>
             ))}

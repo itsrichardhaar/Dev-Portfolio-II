@@ -47,7 +47,7 @@ export default function ArchivePage() {
                 <td className="px-4 py-3">
                   <ul className="flex flex-wrap gap-1">
                     {p.builtWith?.map((t) => (
-                      <li key={t} className="rounded bg-neutral-100 px-2 py-0.5 text-xs dark:bg-neutral-900">
+                      <li key={t} className="rounded-full bg-[rgba(45,212,191,0.1)] text-[rgb(94,234,212)] px-2 py-0.5 text-xs">
                         {t}
                       </li>
                     )) || "—"}

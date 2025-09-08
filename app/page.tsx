@@ -114,7 +114,7 @@ export default function HomePage() {
             title="Featured Projects"
             subtitle="A few favorites—see the archive for more."
           >
-            <div>
+            <div className="not-prose">
               {featured.map((proj) => (
                 <ProjectCard key={proj.slug} project={proj} />
               ))}

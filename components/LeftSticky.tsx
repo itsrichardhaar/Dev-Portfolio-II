@@ -40,8 +40,8 @@ export default function LeftSticky({
                 className={
                   "group flex w-full items-center gap-3 rounded px-2 py-2 text-left transition " +
                   (active === s.id
-                    ? "font-semibold text-neutral-900 dark:text-white"
-                    : "text-neutral-500 hover:text-neutral-900 dark:text-neutral-400 dark:hover:text-white")
+                    ? "font-semibold text-neutral-900 dark:text-white uppercase"
+                    : "text-copy hover:text-neutral-900 dark:text-neutral-400 dark:hover:text-white uppercase")
                 }
               >
                 <span
@@ -61,7 +61,7 @@ export default function LeftSticky({
       </nav>
 
       {/* Socials */}
-      <div className="mt-10">
+      <div className="mt-10 mb-10">
         <ul className="flex gap-4 text-neutral-500">
           <li>
             <a
