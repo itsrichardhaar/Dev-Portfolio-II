@@ -1,13 +1,18 @@
 // data/projects.ts
 export type Project = {
-  slug: string;           // keep for later; not used yet
+  slug: string;
   title: string;
   year?: number;
   summary?: string;
   madeAt?: string;
   builtWith?: string[];
-  link?: string;          // external link (optional)
-  featured?: boolean;     // controls homepage visibility
+  link?: string;          // optional external URL
+  featured?: boolean;
+
+  // NEW: fields for detail page
+  description?: string[]; // paragraphs
+  highlights?: string[];  // bullet list
+  images?: { src: string; alt?: string; width?: number; height?: number }[];
 };
 
 export const projects: Project[] = [
@@ -21,6 +26,16 @@ export const projects: Project[] = [
     builtWith: ["Next.js", "TypeScript", "Tailwind"],
     link: "https://example.com",
     featured: true,
+    description: [
+    "Led a ground-up redesign focused on performance, accessibility, and maintainability.",
+    "Built a modular component system and editorial workflow."
+  ],
+  highlights: [
+    "95+ Core Web Vitals across pages",
+    "Edge-rendered pages with fast TTFB",
+    "Accessible components with testing"
+  ],
+  images: [{ src: "/images/redesign-hero.jpg", alt: "Homepage hero" }]
   },
   {
     slug: "analytics-dashboard",
