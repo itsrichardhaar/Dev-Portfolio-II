@@ -57,7 +57,7 @@ export default function HomePage() {
         <LeftSticky sections={sections} active={active} onNavClick={onNavClick} />
       </aside>
 
-      <main ref={scrollRef} className="scrollport relative lg:col-span-7 lg:h-screen lg:min-h-0 lg:overflow-y-auto lg:py-16 lg:pr-6">
+      <main ref={scrollRef} className="scrollport relative lg:col-span-7 lg:h-screen lg:min-h-0 lg:overflow-y-auto lg:py-16 lg:pr-6 [scrollbar-gutter:stable]">
         <div className="py-10 lg:py-0">
           {/* About */}
           <Section id="about" title="About">

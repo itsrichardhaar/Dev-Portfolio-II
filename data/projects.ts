@@ -38,14 +38,25 @@ export const projects: Project[] = [
   images: [{ src: "/images/redesign-hero.jpg", alt: "Homepage hero" }]
   },
   {
-    slug: "analytics-dashboard",
-    title: "Analytics Dashboard",
-    year: 2024,
-    summary: "Realtime charts, filters, and role-based access.",
-    madeAt: "Startup XYZ",
-    builtWith: ["React", "WebSockets", "Vite"],
-    link: "https://example.com",
+    slug: "three-d-model-configurator",
+    title: "BuiltRite Model Configurator",
+    year: 2025,
+    summary: "Configure your own storage unit model.",
+    madeAt: "Springer Studios",
+    builtWith: ["React", "Three.js", "TypeScript"],
+    link: "https://built-rite-model-configurator-59t1.vercel.app",
     featured: true,
+  },
+  {
+    slug: "cvcc-program-filter",
+    title: "CVCC Programs of Study Filter",
+    year: 2025,
+    summary:
+      "UI system built to help CVCC students find specific programs of study.",
+    madeAt: "Startup XYZ",
+    builtWith: ["PHP", "JavaScript", "mySQL"],
+    link: "https://cvcc.edu/programs-of-study/",
+    featured: true, // will only show on Archive
   },
   {
     slug: "design-system",
@@ -56,6 +67,6 @@ export const projects: Project[] = [
     madeAt: "Startup XYZ",
     builtWith: ["Storybook", "TypeScript"],
     link: "https://example.com",
-    featured: false, // will only show on Archive
+    featured: true, // will only show on Archive
   },
 ];
