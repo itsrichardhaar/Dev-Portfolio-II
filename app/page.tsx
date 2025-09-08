@@ -1,17 +1,18 @@
 "use client";
 
 import { useEffect, useMemo, useRef, useState } from "react";
-import LeftSticky from "@/components/LeftSticky";
-import Section from "@/components/Section";
-import Timeline from "@/components/Timeline";
+import LeftSticky from "../components/LeftSticky";
+import Section from "../components/Section";
+import Timeline from "../components/Timeline";
+import ProjectCard from "../components/ProjectCard"; // NEW
+import { projects } from "../data/projects";         // NEW
 
 export default function HomePage() {
   const sections = useMemo(
     () => [
       { id: "about", label: "About" },
       { id: "experience", label: "Experience" },
-      // We'll add Projects after we create ProjectCard + data
-      // { id: "projects", label: "Projects" },
+      { id: "projects", label: "Projects" }, // NEW
     ],
     []
   );
@@ -19,7 +20,6 @@ export default function HomePage() {
   const [active, setActive] = useState(sections[0].id);
   const scrollRef = useRef<HTMLDivElement | null>(null);
 
-  // Scrollspy: watch sections INSIDE the right column
   useEffect(() => {
     const root = scrollRef.current;
     if (!root) return;
@@ -48,16 +48,18 @@ export default function HomePage() {
     if (root && el) root.scrollTo({ top: el.offsetTop - 16, behavior: "smooth" });
   };
 
+  // Featured only for homepage
+  const featured = projects.filter((p) => p.featured);
+
   return (
     <div className="mx-auto grid h-screen max-w-6xl grid-cols-1 gap-0 px-4 sm:px-6 lg:grid-cols-12 lg:gap-8">
-      {/* LEFT sticky */}
       <aside className="lg:col-span-5 lg:py-16">
         <LeftSticky sections={sections} active={active} onNavClick={onNavClick} />
       </aside>
 
-      {/* RIGHT scrollable column */}
       <main ref={scrollRef} className="lg:col-span-7 lg:h-screen lg:overflow-y-auto lg:py-16">
         <div className="py-10 lg:py-0">
+          {/* About */}
           <Section id="about" title="About">
             <p>
               I’m a front-end engineer focusing on fast, accessible web apps. I enjoy React,
@@ -68,6 +70,7 @@ export default function HomePage() {
             </p>
           </Section>
 
+          {/* Experience */}
           <Section id="experience" title="Experience">
             <Timeline
               items={[
@@ -93,15 +96,31 @@ export default function HomePage() {
             />
           </Section>
 
-          {/* We'll add this after creating ProjectCard + data */}
-          {/*
-          <Section id="projects" title="Featured Projects" subtitle="A few favorites—see the archive for more.">
-            ...cards go here...
+          {/* Projects */}
+          <Section
+            id="projects"
+            title="Featured Projects"
+            subtitle="A few favorites—see the archive for more."
+          >
+            <div>
+              {featured.map((proj) => (
+                <ProjectCard key={proj.slug} project={proj} />
+              ))}
+            </div>
+
+            <div className="mt-8">
+              <a
+                href="/archive"
+                className="text-sm font-medium text-neutral-700 underline-offset-4 hover:underline dark:text-neutral-300"
+              >
+                View full project archive →
+              </a>
+            </div>
           </Section>
-          */}
         </div>
       </main>
     </div>
   );
 }
+
 
