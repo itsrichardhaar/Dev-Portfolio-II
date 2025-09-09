@@ -29,7 +29,7 @@ export default function ProjectCard({ project }: { project: Project }) {
 
   return (
     <Wrapper>
-      <article className="group border-t border-border py-5 first:border-0 transition-transform hover:translate-x-[2px]">
+      <article className="group border-t border-border rounded-xl pr-5 pt-5 pb-5 pl-0 first:border-0 transition-all hover:bg-[rgba(30,41,59,.5)]">
         <div className="flex items-start gap-4">
           {/* Thumbnail */}
           <div className="relative shrink-0 overflow-hidden rounded-lg border border-border/60">
