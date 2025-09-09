@@ -1,14 +1,13 @@
 import Link from "next/link";
-import { useCallback, type ReactNode } from "react";
+import { useCallback, useState, type ReactNode } from "react";
 
 export type TimelineItem = {
   role: string;
   org: string;
-  /** Shown next to the dot on the left (e.g., "2025 — Present" or "Mar 2023") */
-  time: string;
+  time: string;        
   bullets?: string[];
-  href?: string;       // make the whole right-card clickable
-  external?: boolean;  // open in new tab when true
+  href?: string;       
+  external?: boolean;  
 };
 
 type RowWrapperProps = {
@@ -78,25 +77,26 @@ function RowWrapper({
 export default function Timeline({
   items,
   onItemHover,
-  /** tweak the left column width (dates+rail) if needed */
   leftWidthClass = "sm:w-40 w-36",
 }: {
   items: TimelineItem[];
   onItemHover?: (active: boolean) => void;
   leftWidthClass?: string;
 }) {
+  const [hovered, setHovered] = useState<number | null>(null);
+
   const enter = useCallback(() => onItemHover?.(true), [onItemHover]);
   const leave = useCallback(() => onItemHover?.(false), [onItemHover]);
 
   return (
-    // vertical spacing BETWEEN cards
     <ul className="not-prose space-y-5 sm:space-y-6">
       {items.map((it, idx) => {
         const isLast = idx === items.length - 1;
+        const isActive = hovered === idx;
+
         return (
           <li
             key={`${it.role}-${it.time}-${idx}`}
-            // tighten LEFT/RIGHT gap between dates rail and card
             className="grid grid-cols-[auto_1fr] gap-x-2 sm:gap-x-3"
           >
             {/* LEFT column: rail + dot + time */}
@@ -108,34 +108,51 @@ export default function Timeline({
                   className="absolute left-3 top-5 bottom-[-1.25rem] w-px bg-neutral-200 dark:bg-neutral-800"
                 />
               )}
-              {/* dot */}
+
+              {/* dot (lights up when the card is hovered/focused) */}
               <span
                 aria-hidden="true"
-                className="absolute left-3 top-4 h-2 w-2 -translate-x-1/2 rounded-full bg-emerald-400 ring-2 ring-emerald-200 dark:ring-emerald-900"
+                className={[
+                  "absolute left-3 top-4 h-2 w-2 -translate-x-1/2 rounded-full transition-all duration-200",
+                  isActive
+                    ? "bg-emerald-500 ring-4 ring-emerald-200/80 dark:ring-emerald-900/70 scale-110"
+                    : "bg-emerald-400 ring-2 ring-emerald-200 dark:ring-emerald-900 scale-100",
+                ].join(" ")}
               />
+
               {/* time label */}
               <div className="pl-6 pt-3 text-xs sm:text-sm text-neutral-500">
                 {it.time}
               </div>
             </div>
 
-            {/* RIGHT column: clickable card; add vertical breathing space */}
+            {/* RIGHT column: clickable card */}
             <RowWrapper
               href={it.href}
               external={it.external}
-              onMouseEnter={enter}
-              onMouseLeave={leave}
-              onFocus={enter}
-              onBlur={leave}
+              onMouseEnter={() => {
+                setHovered(idx);
+                enter();
+              }}
+              onMouseLeave={() => {
+                setHovered(null);
+                leave();
+              }}
+              onFocus={() => {
+                setHovered(idx);
+                enter();
+              }}
+              onBlur={() => {
+                setHovered(null);
+                leave();
+              }}
               className={[
-                // spacing inside card (slightly taller)
                 "block rounded-lg border border-transparent px-3 py-3.5 md:px-4 md:py-4",
-                // extra space ABOVE/BELOW the card itself
                 "my-1.5 sm:my-2",
-                // interactivity & hover visuals
                 "transition-all duration-200",
-                "hover:border-neutral-300 dark:hover:border-neutral-700",
-                "hover:bg-neutral-50/70 dark:hover:bg-neutral-900/40",
+                isActive
+                  ? "border-neutral-300 bg-neutral-50/70 dark:border-neutral-700 dark:bg-neutral-900/40"
+                  : "hover:border-neutral-300 hover:bg-neutral-50/70 dark:hover:border-neutral-700 dark:hover:bg-neutral-900/40",
                 it.href
                   ? "cursor-pointer focus:outline-none focus-visible:ring-2 focus-visible:ring-emerald-400/70"
                   : "",
@@ -159,6 +176,7 @@ export default function Timeline({
     </ul>
   );
 }
+
 
 
 
