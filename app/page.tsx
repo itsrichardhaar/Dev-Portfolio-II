@@ -58,7 +58,7 @@ export default function HomePage() {
               optimize performance, and drive business growth across multi-channel marketing strategies and campaigns.
             </p>
             <p className="mt-4">
-              In my spare time, I'm usually skiing in the rockies, or hanging somewhere in OBX. My home bases are in Wilmington and Raleigh, NC.
+              In my spare time, I’m usually skiing in the rockies, or hanging somewhere in OBX. My home bases are in Wilmington and Raleigh, NC.
             </p>
           </Section>
 
