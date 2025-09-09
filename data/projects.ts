@@ -17,27 +17,6 @@ export type Project = {
 
 export const projects: Project[] = [
   {
-    slug: "site-redesign",
-    title: "Studsvik Website Redesign",
-    year: 2023,
-    summary:
-      "Complete redesign with WordPress and PHP reusable templates.",
-    madeAt: "Springer Studios",
-    builtWith: ["WordPress", "PHP", "JavaScript"],
-    link: "https://www.studsvik.com",
-    featured: true,
-    description: [
-    "Led a ground-up redesign focused on performance, accessibility, and maintainability.",
-    "Built a modular component and template system."
-  ],
-  highlights: [
-    "95+ Core Web Vitals across pages",
-    "Edge-rendered pages with fast TTFB",
-    "Accessible components with testing"
-  ],
-  images: [{ src: "/images/Studsvik-2.png", alt: "Studsvik Homepage" }]
-  },
-  {
     slug: "three-d-model-configurator",
     title: "BuiltRite Model Configurator",
     year: 2025,
@@ -78,6 +57,17 @@ export const projects: Project[] = [
     link: "https://cvcc.edu/programs-of-study/",
     featured: false, 
   },
+  { 
+    slug: "project-management-app-2025", 
+    title: "Project Management App", 
+    year: 2025, 
+    summary:
+      "A project and task management for our internal teams to utilize and test.",
+    madeAt: "Springer Studios", 
+    builtWith: ["React", "Postgres", "AWS"], 
+    link: "https://main.dp9uus28slxd2.amplifyapp.com/", 
+    featured: false 
+  },
   {
     slug: "cvcc-program-filter",
     title: "CVCC Programs of Study Filter",
@@ -109,5 +99,342 @@ export const projects: Project[] = [
     builtWith: ["Storybook", "TypeScript"],
     link: "https://example.com",
     featured: true, 
+  },
+  { 
+    slug: "carteret-community-college", 
+    title: "Carteret Community College", 
+    year: 2024, 
+    summary:
+      "Built and deployed a full site redesign for Carteret Community College.",
+    madeAt: "Springer Studios", 
+    builtWith: ["WordPress", "PHP", "JavaScript"], 
+    link: "https://carteret.edu/", 
+    featured: false 
+  },
+  { 
+    slug: "vance-granville-community-college", 
+    title: "Vance-Granville Community College", 
+    year: 2024, 
+    summary:
+      "Built and deployed a full site redesign for Vance Granville Community College.",
+    madeAt: "Springer Studios", 
+    builtWith: ["WordPress", "PHP"], 
+    link: "https://www.vgcc.edu", 
+    featured: false 
+  },
+  { 
+    slug: "personal-website-v2-2024", 
+    title: "Personal Website V2", 
+    year: 2024, 
+    summary:
+      "Version two of my dev portfolio site.",
+    madeAt: "", 
+    builtWith: ["React", "Styled Components"], 
+    link: "https://www.richardhaar.com/", 
+    featured: false 
+  },
+  { 
+    slug: "cooks-mill-whiskey", 
+    title: "Cooks Mill Whiskey", 
+    year: 2024, 
+    summary:
+      "Collaborated in the site design of Cooks Mill Whiskey using Webflow CMS.",
+    madeAt: "Springer Studios", 
+    builtWith: ["Webflow"], 
+    link: "https://www.cooksmillwhiskey.com", 
+    featured: false 
+  },
+  { 
+    slug: "tenrecx", 
+    title: "TenrecX", 
+    year: 2024, 
+    summary:
+      "Collaborated in the site design of the Tenrecx site using Webflow CMS. Implemented GSAP animations.",
+    madeAt: "Springer Studios", 
+    builtWith: ["Webflow", "jQuery", "Lottie", "GSAP"], 
+    link: "https://www.tenrecx.com", 
+    featured: false 
+  },
+  { 
+    slug: "essential-personnel", 
+    title: "Essential Personnel", 
+    year: 2024, 
+    summary:
+      "Collaborated in the site design of Essential Personnell using Webflow CMS.",
+    madeAt: "Springer Studios", 
+    builtWith: ["Webflow", "jQuery", "SwiperJS"], 
+    link: "https://www.essper.com", 
+    featured: false 
+  },
+  { 
+    slug: "springer-studios-redesign", 
+    title: "Springer Studios Redesign", 
+    year: 2024, 
+    summary:
+      "Collaborated in the site design and development of the Springer Studios redesign using Webflow CMS.",
+    madeAt: "Springer Studios", 
+    builtWith: ["Webflow", "jQuery", "GSAP", "SwiperJS"], 
+    link: "https://www.springerstudios.com", 
+    featured: false 
+  },
+  { 
+    slug: "infintegration", 
+    title: "Infintegration", 
+    year: 2024, 
+    summary:
+      "Built and deployed the Infintegration site.",
+    madeAt: "Springer Studios", 
+    builtWith: ["WordPress", "PHP", "jQuery", "SwiperJS"], 
+    link: "https://infintegration.com/", 
+    featured: false 
+  },
+  { 
+    slug: "cameron-art-museum", 
+    title: "Cameron Art Museum", 
+    year: 2023, 
+    summary:
+      "Built and deployed a full redesign of the Cameron Art Museum site.",
+    madeAt: "Springer Studios", 
+    builtWith: ["WordPress", "PHP"], 
+    link: "https://cameronartmuseum.org", 
+    featured: false 
+  },
+  { 
+    slug: "iredell-ready", 
+    title: "Iredell Ready", 
+    year: 2023, 
+    summary:
+      "Built and deployed a new site for Iredell Ready. Iredell Ready was established in 2022 in partnership with industry, academia, government, and the nonprofit community to identify, align, and enhance strategic priorities across the workforce development pipeline from early childhood education to retirement.",
+    madeAt: "Springer Studios", 
+    builtWith: ["WordPress", "PHP", "SwiperJS"], 
+    link: "https://iredellready.com", 
+    featured: false 
+  },
+  { 
+    slug: "honeycutt-construction-services", 
+    title: "Honeycutt Construction Services", 
+    year: 2023, 
+    summary:
+      "Built and deployed a full redesign for Honeycutt Construction Services.",
+    madeAt: "Springer Studios", 
+    builtWith: ["WordPress", "PHP"], 
+    link: "https://honeycuttcorp.com", 
+    featured: false 
+  },
+  { 
+    slug: "southeastern-community-college", 
+    title: "Southeastern Community College", 
+    year: 2023, 
+    summary:
+      "Built and deployed a full redesign for Southeastern Community College.",
+    madeAt: "Springer Studios", 
+    builtWith: ["WordPress", "PHP", "JavaScript"], 
+    link: "https://www.sccnc.edu", 
+    featured: false 
+  },
+  {
+    slug: "site-redesign",
+    title: "Studsvik Website Redesign",
+    year: 2023,
+    summary:
+      "Complete redesign with WordPress and PHP reusable templates.",
+    madeAt: "Springer Studios",
+    builtWith: ["WordPress", "PHP", "JavaScript"],
+    link: "https://www.studsvik.com",
+    featured: true,
+    description: [
+    "Led a ground-up redesign focused on performance, accessibility, and maintainability.",
+    "Built a modular component and template system."
+  ],
+  highlights: [
+    "95+ Core Web Vitals across pages",
+    "Edge-rendered pages with fast TTFB",
+    "Accessible components with testing"
+  ],
+  images: [{ src: "/images/Studsvik-2.png", alt: "Studsvik Homepage" }]
+  },
+  { 
+    slug: "durham-charter", 
+    title: "Durham Charter", 
+    year: 2023, 
+    summary:
+      "Built and deployed a full redesign for Durham Charter School.",
+    madeAt: "Springer Studios", 
+    builtWith: ["WordPress", "PHP"], 
+    link: "https://www.durhamcharter.org", 
+    featured: false 
+  },
+  { 
+    slug: "bladen-community-college", 
+    title: "Bladen Community College", 
+    year: 2022, 
+    summary:
+      "Built and deployed a full redesign for Bladen Community College.",
+    madeAt: "Springer Studios", 
+    builtWith: ["WordPress", "PHP", "JavaScript", "MySQL"], 
+    link: "https://www.bladencc.edu", 
+    featured: false 
+  },
+  { 
+    slug: "bladen-community-college", 
+    title: "Bladen Community College", 
+    year: 2022, 
+    summary:
+      "Built and deployed a full redesign for James Sprunt Community College.",
+    madeAt: "Springer Studios", 
+    builtWith: ["WordPress", "PHP", "JavaScript", "MySQL"], 
+    link: "https://www.bladencc.edu", 
+    featured: false 
+  },
+  { 
+    slug: "cape-fear-community-college", 
+    title: "Cape Fear Community College", 
+    year: 2022, 
+    summary:
+      "Collaborated on an overhaul of the Programs of Study structure and Course Registration API.",
+    madeAt: "Springer Studios", 
+    builtWith: ["WordPress", "PHP", "JavaScript", "MySQL", "Rest API"], 
+    link: "https://cfcc.edu/", 
+    featured: false 
+  },
+  { 
+    slug: "trask-land-company-2022", 
+    title: "Trask Land Company", 
+    year: 2022, 
+    summary:
+      "Built and deployed a full redesign for Trask Land Company.",
+    madeAt: "Springer Studios", 
+    builtWith: ["WordPress", "PHP"], 
+    link: "https://trasklandco.com", 
+    featured: false 
+  },
+  { 
+    slug: "thomas-construction-group", 
+    title: "Thomas Construction Group", 
+    year: 2022, 
+    summary:
+      "Built and deployed a full redesign for Thomas Construction Company.",
+    madeAt: "Springer Studios", 
+    builtWith: ["WordPress", "PHP", "JavaScript"], 
+    link: "https://thomasconstructiongroup.com", 
+    featured: false 
+  },
+  { 
+    slug: "mccord-contractors-inc", 
+    title: "McCord Contractors Inc", 
+    year: 2022, 
+    summary:
+      "Built and deployed a full redesign for McCord Contractors Inc.",
+    madeAt: "HighClick Media", 
+    builtWith: ["WordPress", "PHP"], 
+    link: "https://mccordcontractors.com", 
+    featured: false 
+  },
+  { 
+    slug: "silvercare", 
+    title: "SilverCare", 
+    year: 2022, 
+    madeAt: "HighClick Media", 
+    summary:
+      "Built and deployed a full redesign for Silvercare.",
+    builtWith: ["WordPress", "PHP"], 
+    link: "https://silvercareweb.com", 
+    featured: false 
+  },
+  { 
+    slug: "edge-dental-solutions", 
+    title: "Edge Dental Solutions", 
+    year: 2022, 
+    summary:
+      "Built and deployed a full redesign for Edge Dental Solutions.",
+    madeAt: "HighClick Media", 
+    builtWith: ["WordPress", "PHP"], 
+    link: "https://edgedentalsolutions.com", 
+    featured: false 
+  },
+  { 
+    slug: "td-goodwin", 
+    title: "TD Goodwin", 
+    year: 2021, 
+    summary:
+      "Built and deployed a full redesign for TD Goodwin Construction.",
+    madeAt: "HighClick Media", 
+    builtWith: ["WordPress", "PHP"], 
+    link: "https://www.tdgoodwin.com", 
+    featured: false 
+  },
+  { 
+    slug: "encounterworks-ehr", 
+    title: "EncounterWorks EHR", 
+    year: 2020, 
+    summary:
+      "Built and deployed a site for EncounterWorks EHR.",
+    madeAt: "HighClick Media", 
+    builtWith: ["WordPress", "PHP"], 
+    link: "https://encounterworks.com/", 
+    featured: false 
+  },
+  { 
+    slug: "hidden-talents-2018", 
+    title: "Hidden Talents", 
+    year: 2018, 
+    madeAt: "UNC Coding Bootcamp", 
+    builtWith: ["React", "JavaScript", "Node.js"], 
+    link: "https://github.com/itsrichardhaar/Hidden-Talents", 
+    featured: false 
+  },
+  { 
+    slug: "know-your-vote-2018", 
+    title: "Know Your Vote", 
+    year: 2018, 
+    madeAt: "UNC Coding Bootcamp", 
+    builtWith: ["React", "JavaScript", "Node.js"], 
+    link: "https://github.com/merinogeospatial/know-your-vote", 
+    featured: false 
+  },
+  { 
+    slug: "hijack-2018", 
+    title: "HiJack", 
+    year: 2018, 
+    madeAt: "UNC Coding Bootcamp", 
+    builtWith: ["React", "JavaScript", "Node.js"], 
+    link: "https://github.com/itsrichardhaar/HiJack/tree/master/Alice", 
+    featured: false 
+  },
+  { 
+    slug: "trivia-game-2018", 
+    title: "Trivia Game", 
+    year: 2018, 
+    madeAt: "UNC Coding Bootcamp", 
+    builtWith: ["JavaScript"], 
+    link: "https://github.com/itsrichardhaar/Homework-5/", 
+    featured: false 
+  },
+  { 
+    slug: "bamazon-app-2018", 
+    title: "Bamazon App", 
+    year: 2018, 
+    madeAt: "UNC Coding Bootcamp", 
+    builtWith: ["Node.js"], 
+    link: "https://github.com/itsrichardhaar/bamazon-app", 
+    featured: false 
+  },
+  { 
+    slug: "liri-node-app-2018", 
+    title: "Liri Node App", 
+    year: 2018, 
+    madeAt: "UNC Coding Bootcamp", 
+    builtWith: ["Node.js"], 
+    link: "https://github.com/itsrichardhaar/liri-node-app", 
+    featured: false 
+  },
+  { 
+    slug: "mongo-scraper-2018", 
+    title: "Mongo Scraper", 
+    year: 2018, 
+    madeAt: "UNC Coding Bootcamp", 
+    builtWith: ["JavaScript"], 
+    link: "https://github.com/itsrichardhaar/mongo-scraper", 
+    featured: false 
   },
 ];
