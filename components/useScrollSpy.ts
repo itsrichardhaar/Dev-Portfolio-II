@@ -98,17 +98,7 @@ export default function useScrollSpy(
     };
   }, [rootRef, sections]);
 
-  // optional manual recompute export (rarely needed)
-  const recompute = () => {
-    const root = rootRef.current;
-    if (!root) return;
-    const els = sections
-      .map((s) => root.querySelector<HTMLElement>(`#${s.id}`))
-      .filter((el): el is HTMLElement => !!el);
-    topsRef.current = els.map((el) => computeTop(el, root));
-  };
-
-  return { active, recompute };
+  return { active };
 }
 
 

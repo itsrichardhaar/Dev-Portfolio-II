@@ -23,7 +23,7 @@ export async function generateMetadata(
     openGraph: {
       title: p.title,
       description: p.summary,
-      images: p.images?.map((img) => ({ url: img.src })),
+      images: p.images?.map((img) => ({ url: img.src })) ?? [],
     },
   };
 }
@@ -42,15 +42,18 @@ export default function ProjectPage({ params }: { params: { slug: string } }) {
       </Link>
 
       <header className="mt-4">
-        <h1 className="text-heading text-4xl font-bold tracking-tight">{p!.title}</h1>
+        <h1 className="text-heading text-4xl font-bold tracking-tight">{p.title}</h1>
         <div className="mt-2 flex flex-wrap items-center gap-3 text-sm text-neutral-500">
-          {p!.year ? <span>{p!.year}</span> : null}
-          {p!.madeAt ? <span>• {p!.madeAt}</span> : null}
+          {p.year ? <span>{p.year}</span> : null}
+          {p.madeAt ? <span>• {p.madeAt}</span> : null}
         </div>
-        {p!.builtWith?.length ? (
+        {p.builtWith?.length ? (
           <ul className="mt-3 flex flex-wrap gap-1">
-            {p!.builtWith.map((t) => (
-              <li key={t} className="rounded-full bg-[rgba(45,212,191,0.1)] text-[rgb(94,234,212)] px-2 py-0.5 text-xs">
+            {p.builtWith.map((t) => (
+              <li
+                key={t}
+                className="rounded-full bg-[rgba(45,212,191,0.1)] text-[rgb(94,234,212)] px-2 py-0.5 text-xs"
+              >
                 {t}
               </li>
             ))}
@@ -58,10 +61,13 @@ export default function ProjectPage({ params }: { params: { slug: string } }) {
         ) : null}
       </header>
 
-      {p!.images?.length ? (
+      {p.images?.length ? (
         <div className="mt-6 grid gap-4">
-          {p!.images.map((img, i) => (
-            <div key={i} className="overflow-hidden rounded-xl border border-neutral-200 dark:border-neutral-800">
+          {p.images.map((img, i) => (
+            <div
+              key={i}
+              className="overflow-hidden rounded-xl border border-neutral-200 dark:border-neutral-800"
+            >
               {img.width && img.height ? (
                 <Image
                   src={img.src}
@@ -79,19 +85,19 @@ export default function ProjectPage({ params }: { params: { slug: string } }) {
         </div>
       ) : null}
 
-      {p!.description?.length ? (
+      {p.description?.length ? (
         <div className="prose prose-neutral mt-8 dark:prose-invert">
-          {p!.description.map((para, i) => (
+          {p.description.map((para, i) => (
             <p key={i}>{para}</p>
           ))}
         </div>
       ) : null}
 
-      {p!.highlights?.length ? (
+      {p.highlights?.length ? (
         <div className="prose prose-neutral mt-6 dark:prose-invert">
           <h2>Highlights</h2>
           <ul>
-            {p!.highlights.map((h, i) => (
+            {p.highlights.map((h, i) => (
               <li key={i}>{h}</li>
             ))}
           </ul>
@@ -99,10 +105,10 @@ export default function ProjectPage({ params }: { params: { slug: string } }) {
       ) : null}
 
       <footer className="mt-10 flex gap-4">
-        {p!.link ? (
+        {p.link ? (
           <a
             className="rounded-md border border-neutral-300 px-3 py-1.5 text-sm hover:bg-neutral-100 dark:border-neutral-700 dark:hover:bg-neutral-900"
-            href={p!.link}
+            href={p.link}
             target="_blank"
             rel="noreferrer"
           >
