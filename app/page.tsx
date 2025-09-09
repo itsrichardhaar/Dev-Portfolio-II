@@ -1,3 +1,4 @@
+// app/page.tsx
 "use client";
 
 import { useMemo, useRef } from "react";
@@ -6,7 +7,7 @@ import Section from "../components/Section";
 import Timeline from "../components/Timeline";
 import ProjectCard from "../components/ProjectCard";
 import { projects } from "../data/projects";
-import useScrollSpy from "../components/useScrollSpy"; // 👈 use the hook
+import useScrollSpy from "../components/useScrollSpy";
 
 export default function HomePage() {
   const sections = useMemo(
@@ -20,6 +21,7 @@ export default function HomePage() {
 
   const scrollRef = useRef<HTMLElement | null>(null);
   const { active } = useScrollSpy(scrollRef, sections);
+  const activeId = active ?? sections[0].id; // <-- remove non-null assertion
 
   const onNavClick = (id: string) => {
     const root = scrollRef.current;
@@ -27,17 +29,16 @@ export default function HomePage() {
     if (!root || !el) return;
     const rootTop = root.getBoundingClientRect().top;
     const elTop = el.getBoundingClientRect().top;
-    const target = root.scrollTop + (elTop - rootTop) - 16; // same offset
+    const target = root.scrollTop + (elTop - rootTop) - 16;
     root.scrollTo({ top: Math.max(0, Math.round(target)), behavior: "smooth" });
   };
 
-  // Featured only for homepage
   const featured = projects.filter((p) => p.featured);
 
   return (
     <div className="mx-auto grid lg:h-screen max-w-6xl grid-cols-1 gap-0 px-4 sm:px-6 lg:grid-cols-12 lg:gap-8 lg:overflow-hidden">
       <aside className="lg:col-span-5 lg:py-16">
-        <LeftSticky sections={sections} active={active!} onNavClick={onNavClick} />
+        <LeftSticky sections={sections} active={activeId} onNavClick={onNavClick} />
       </aside>
 
       <main
@@ -107,10 +108,7 @@ export default function HomePage() {
             </div>
 
             <div className="mt-8">
-              <a
-                href="/archive"
-                className="text-sm font-medium text-copy"
-              >
+              <a href="/archive" className="text-sm font-medium text-copy">
                 View full project archive →
               </a>
             </div>
@@ -120,6 +118,7 @@ export default function HomePage() {
     </div>
   );
 }
+
 
 
 

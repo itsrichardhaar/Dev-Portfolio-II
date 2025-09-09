@@ -1,12 +1,13 @@
 "use client";
-
 import { useEffect, useRef, useState } from "react";
+
+export type SectionDef = { id: string; label: string };
 
 export default function useScrollSpy(
   rootRef: React.RefObject<HTMLElement | null>,
-  sections: { id: string; label: string }[]
-) {
-  const [active, setActive] = useState(sections[0]?.id);
+  sections: SectionDef[]
+): { active: string | undefined; recompute: () => void } {
+  const [active, setActive] = useState<string | undefined>(sections[0]?.id);
   const topsRef = useRef<number[]>([]);
   const debounceId = useRef<ReturnType<typeof setTimeout> | null>(null);
 
@@ -28,26 +29,22 @@ export default function useScrollSpy(
     let els = getEls();
 
     const recompute = () => {
-      els = getEls(); // re-grab in case DOM changed
+      els = getEls();
       topsRef.current = els.map((el) => computeTop(el, root));
     };
 
-    // Initial
     recompute();
 
-    // Recompute on resize/relayout
     const ro = new ResizeObserver(() => recompute());
     ro.observe(root);
     els.forEach((el) => ro.observe(el));
 
-    // Recompute on DOM mutations (images loaded, content toggles, etc.)
     const mo = new MutationObserver(() => {
       if (debounceId.current) clearTimeout(debounceId.current);
       debounceId.current = setTimeout(recompute, 60);
     });
     mo.observe(root, { subtree: true, childList: true, attributes: true });
 
-    // Recompute when images load
     const imgs = root.querySelectorAll("img");
     imgs.forEach((img) => {
       if (!img.complete) img.addEventListener("load", recompute, { once: true });
@@ -60,7 +57,6 @@ export default function useScrollSpy(
       requestAnimationFrame(() => {
         const { scrollTop, scrollHeight, clientHeight } = root;
 
-        // If we're at the end, force last section active
         const nearBottom = scrollHeight - (scrollTop + clientHeight) <= 24;
         if (nearBottom) {
           const lastId = sections[sections.length - 1]?.id ?? sections[0]?.id;
@@ -69,10 +65,8 @@ export default function useScrollSpy(
           return;
         }
 
-        // Pivot ~35% down viewport so short sections activate
         const pivot = scrollTop + Math.min(clientHeight * 0.35, 320);
 
-        // Pick the last section whose top <= pivot
         const tops = topsRef.current;
         let idx = 0;
         for (let i = 0; i < tops.length; i++) {
@@ -84,9 +78,7 @@ export default function useScrollSpy(
       });
     };
 
-    // Prime once
     onScroll();
-
     root.addEventListener("scroll", onScroll, { passive: true });
 
     return () => {
@@ -98,7 +90,17 @@ export default function useScrollSpy(
     };
   }, [rootRef, sections]);
 
-  return { active };
+  const recompute = () => {
+    const root = rootRef.current;
+    if (!root) return;
+    const els = sections
+      .map((s) => root.querySelector<HTMLElement>(`#${s.id}`))
+      .filter((el): el is HTMLElement => !!el);
+    topsRef.current = els.map((el) => computeTop(el, root));
+  };
+
+  return { active, recompute };
 }
+
 
 

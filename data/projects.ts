@@ -275,17 +275,17 @@ export const projects: Project[] = [
     link: "https://www.bladencc.edu", 
     featured: false 
   },
-  { 
-    slug: "bladen-community-college", 
-    title: "Bladen Community College", 
-    year: 2022, 
-    summary:
-      "Built and deployed a full redesign for James Sprunt Community College.",
-    madeAt: "Springer Studios", 
-    builtWith: ["WordPress", "PHP", "JavaScript", "MySQL"], 
-    link: "https://www.bladencc.edu", 
-    featured: false 
-  },
+  {
+  slug: "james-sprunt-community-college",
+  title: "James Sprunt Community College",
+  year: 2022,
+  summary:
+    "Built and deployed a full redesign for James Sprunt Community College.",
+  madeAt: "Springer Studios",
+  builtWith: ["WordPress", "PHP", "JavaScript", "MySQL"],
+  link: "https://jamessprunt.edu", // update to the real URL if different
+  featured: false,
+},
   { 
     slug: "cape-fear-community-college", 
     title: "Cape Fear Community College", 

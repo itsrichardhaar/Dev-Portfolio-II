@@ -1,5 +1,6 @@
 // app/archive/page.tsx
 import { projects } from "@/data/projects";
+import Link from "next/link";
 
 export const metadata = {
   title: "Project Archive — Your Name",
@@ -12,6 +13,12 @@ export default function ArchivePage() {
 
   return (
     <div className="mx-auto max-w-5xl px-4 py-12 sm:px-6">
+       <Link
+        href="/"
+        className="text-sm text-neutral-600 underline-offset-4 hover:underline dark:text-neutral-400"
+      >
+        ← Back to home
+      </Link>
       <h1 className="text-3xl font-bold tracking-tight">Project Archive</h1>
       <p className="mt-2 text-neutral-600 dark:text-neutral-400">
         A list of things I’ve worked on over the years.

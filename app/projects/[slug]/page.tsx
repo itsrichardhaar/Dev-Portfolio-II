@@ -1,8 +1,12 @@
+// app/project/[slug]/page.tsx
 import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import type { Metadata } from "next";
 import { projects } from "@/data/projects";
+
+type Params = { slug: string };
+type Props = { params: Params | Promise<Params> };
 
 export function generateStaticParams() {
   return projects.map((p) => ({ slug: p.slug }));
@@ -13,23 +17,26 @@ function getProject(slug: string) {
 }
 
 export async function generateMetadata(
-  { params }: { params: { slug: string } }
+  { params }: Props
 ): Promise<Metadata> {
-  const p = getProject(params.slug);
+  const { slug } = await params; // works for both object or Promise
+  const p = getProject(slug);
   if (!p) return { title: "Project not found" };
+
   return {
     title: `${p.title} — Project`,
     description: p.summary,
     openGraph: {
       title: p.title,
       description: p.summary,
-      images: p.images?.map((img) => ({ url: img.src })) ?? [],
+      images: p.images?.map((img) => ({ url: img.src })),
     },
   };
 }
 
-export default function ProjectPage({ params }: { params: { slug: string } }) {
-  const p = getProject(params.slug);
+export default async function ProjectPage({ params }: Props) {
+  const { slug } = await params; // same trick here
+  const p = getProject(slug);
   if (!p) notFound();
 
   return (
@@ -52,7 +59,7 @@ export default function ProjectPage({ params }: { params: { slug: string } }) {
             {p.builtWith.map((t) => (
               <li
                 key={t}
-                className="rounded-full bg-[rgba(45,212,191,0.1)] text-[rgb(94,234,212)] px-2 py-0.5 text-xs"
+                className="rounded bg-[rgba(45,212,191,0.1)] text-[rgb(94,234,212)] px-2 py-0.5 text-xs"
               >
                 {t}
               </li>
@@ -125,3 +132,5 @@ export default function ProjectPage({ params }: { params: { slug: string } }) {
     </div>
   );
 }
+
+
