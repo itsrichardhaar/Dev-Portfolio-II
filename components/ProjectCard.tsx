@@ -1,56 +1,90 @@
+// components/ProjectCard.tsx
 import Link from "next/link";
 import type { Project } from "@/data/projects";
 
 export default function ProjectCard({ project }: { project: Project }) {
-  const internalHref = project.slug && !project.link ? `/projects/${project.slug}` : null;
+  const internalHref =
+    project.slug && !project.link ? `/projects/${project.slug}` : null;
 
   const Wrapper = ({ children }: { children: React.ReactNode }) =>
     internalHref ? (
-      <Link href={internalHref} className="block w-full">
+      <Link href={internalHref} className="block w-full no-underline">
         {children}
       </Link>
     ) : project.link ? (
-      <a href={project.link} target="_blank" rel="noreferrer" className="block w-full">
+      <a
+        href={project.link}
+        target="_blank"
+        rel="noreferrer"
+        className="block w-full no-underline"
+      >
         {children}
       </a>
     ) : (
       <div className="block w-full">{children}</div>
     );
 
+  // Use the first image if provided
+  const thumb = project.images?.[0];
+
   return (
     <Wrapper>
-      <article className="group border-t border-neutral-200 py-5 first:border-0 dark:border-neutral-800 transition-transform will-change-transform hover:translate-x-[2px]">
-        <header className="flex flex-col sm:flex-row sm:items-baseline sm:justify-between">
-          <h3 className="text-[1.05rem] font-semibold tracking-tight text-neutral-900 dark:text-neutral-100">
-            <span className="underline decoration-transparent group-hover:decoration-current underline-offset-4 transition">
-              {project.title}
-            </span>
-          </h3>
-          {project.year ? (
-            <span className="mt-1 text-sm text-neutral-500 sm:mt-0">
-              {project.year}
-            </span>
-          ) : null}
-        </header>
+      <article className="group border-t border-border py-5 first:border-0 transition-transform hover:translate-x-[2px]">
+        <div className="flex items-start gap-4">
+          {/* Thumbnail */}
+          <div className="relative shrink-0 overflow-hidden rounded-lg border border-border/60">
+            {/* fixed box to prevent layout shift; tweak size to taste */}
+            <div className="h-20 w-28 sm:h-28 sm:w-36 bg-white/5" />
+            {thumb ? (
+              // eslint-disable-next-line @next/next/no-img-element
+              <img
+                src={thumb.src}
+                alt={thumb.alt ?? project.title}
+                loading="lazy"
+                className="absolute inset-0 h-full w-full object-cover"
+              />
+            ) : null}
+          </div>
 
-        {project.summary && (
-          <p className="mt-1.5 text-[0.95rem] leading-6 text-neutral-600 dark:text-neutral-400">
-            {project.summary}
-          </p>
-        )}
+          {/* Text side */}
+          <div className="min-w-0 flex-1">
+            <header className="flex flex-col sm:flex-row sm:items-baseline sm:justify-between">
+              <h3 className="truncate text-[1.05rem] font-semibold tracking-tight text-heading">
+                {project.title}
+              </h3>
+              {project.year ? (
+                <span className="mt-1 text-sm text-copy/80 sm:mt-0">
+                  {project.year}
+                </span>
+              ) : null}
+            </header>
 
-        {project.builtWith?.length ? (
-          <ul className="mt-2 flex flex-wrap gap-2 text-xs text-neutral-500 dark:text-neutral-400">
-            {project.builtWith.map((t) => (
-              <li key={t} className="rounded-full bg-[rgba(45,212,191,0.1)] text-[rgb(94,234,212)] px-2 py-0.5 text-xs">
-                {t}
-              </li>
-            ))}
-          </ul>
-        ) : null}
+            {project.summary && (
+              <p className="mt-1.5 text-[0.95rem] leading-6 mr-10">
+                {project.summary}
+              </p>
+            )}
+
+            {project.builtWith?.length ? (
+              <ul className="mt-2 flex flex-wrap gap-2">
+                {project.builtWith.map((t) => (
+                  <li
+                    key={t}
+                    className="rounded-full px-2.5 py-1 text-[11px] leading-none
+                               bg-[rgba(45,212,191,0.1)] text-[rgb(94,234,212)]
+                               border border-[rgba(45,212,191,0.25)]"
+                  >
+                    {t}
+                  </li>
+                ))}
+              </ul>
+            ) : null}
+          </div>
+        </div>
       </article>
     </Wrapper>
   );
 }
+
 
 

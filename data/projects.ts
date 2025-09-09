@@ -18,24 +18,24 @@ export type Project = {
 export const projects: Project[] = [
   {
     slug: "site-redesign",
-    title: "Company Website Redesign",
-    year: 2025,
+    title: "Studsvik Website Redesign",
+    year: 2023,
     summary:
-      "Complete redesign with Next.js + Tailwind focused on performance and a11y.",
-    madeAt: "Acme Corp",
-    builtWith: ["Next.js", "TypeScript", "Tailwind"],
-    link: "https://example.com",
+      "Complete redesign with WordPress and PHP reusable templates.",
+    madeAt: "Springer Studios",
+    builtWith: ["WordPress", "PHP", "JavaScript"],
+    link: "https://www.studsvik.com",
     featured: true,
     description: [
     "Led a ground-up redesign focused on performance, accessibility, and maintainability.",
-    "Built a modular component system and editorial workflow."
+    "Built a modular component and template system."
   ],
   highlights: [
     "95+ Core Web Vitals across pages",
     "Edge-rendered pages with fast TTFB",
     "Accessible components with testing"
   ],
-  images: [{ src: "/images/redesign-hero.jpg", alt: "Homepage hero" }]
+  images: [{ src: "/images/Studsvik-2.png", alt: "Studsvik Homepage" }]
   },
   {
     slug: "three-d-model-configurator",

@@ -26,7 +26,7 @@ export default function LeftSticky({
           Richard Haar
         </motion.h1>
         <p className="mt-3 max-w-md text-lg text-neutral-600 dark:text-neutral-400">
-          Front-end engineer building fast, accessible web apps.
+          Senior Web Developer.
         </p>
       </div>
 
@@ -87,10 +87,10 @@ export default function LeftSticky({
           </li>
           <li>
             <a
-              href="mailto:hello@example.com"
+              href="mailto:richard@springerstudios.com"
               className="hover:text-neutral-900 dark:hover:text-white"
             >
-              hello@example.com
+              richard@springerstudios.com
             </a>
           </li>
         </ul>
