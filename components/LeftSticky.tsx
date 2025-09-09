@@ -14,7 +14,7 @@ export default function LeftSticky({
   onNavClick: (id: string) => void;
 }) {
   return (
-    <div className="sticky top-0 flex h-[100dvh] flex-col justify-between py-10 lg:py-16">
+    <div className="sticky top-4 lg:top-6 h-[100dvh] flex flex-col gap-6 py-4 lg:py-6">
       {/* Heading / bio */}
       <div>
         <motion.h1
@@ -31,7 +31,7 @@ export default function LeftSticky({
       </div>
 
       {/* Scrollspy nav */}
-      <nav className="mt-0 hidden lg:block">
+      <nav className="mt-15 hidden lg:block">
         <ul className="space-y-2">
           {sections.map((s) => (
             <li key={s.id}>
@@ -61,7 +61,7 @@ export default function LeftSticky({
       </nav>
 
       {/* Socials */}
-      <div className="mt-10 mb-10">
+      <div className="mt-auto mb-4 lg:mb-6">
         <ul className="flex gap-4 text-neutral-500">
           <li>
             <a
