@@ -1,4 +1,4 @@
-// app/project/[slug]/page.tsx
+// app/projects/[slug]/page.tsx
 import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
@@ -6,7 +6,7 @@ import type { Metadata } from "next";
 import { projects } from "@/data/projects";
 
 type Params = { slug: string };
-type Props = { params: Params | Promise<Params> };
+type Props = { params: Promise<Params> }; // <-- important
 
 export function generateStaticParams() {
   return projects.map((p) => ({ slug: p.slug }));
@@ -19,7 +19,7 @@ function getProject(slug: string) {
 export async function generateMetadata(
   { params }: Props
 ): Promise<Metadata> {
-  const { slug } = await params; // works for both object or Promise
+  const { slug } = await params; // <-- await the promise
   const p = getProject(slug);
   if (!p) return { title: "Project not found" };
 
@@ -35,7 +35,7 @@ export async function generateMetadata(
 }
 
 export default async function ProjectPage({ params }: Props) {
-  const { slug } = await params; // same trick here
+  const { slug } = await params; // <-- await the promise
   const p = getProject(slug);
   if (!p) notFound();
 
@@ -132,5 +132,6 @@ export default async function ProjectPage({ params }: Props) {
     </div>
   );
 }
+
 
 
