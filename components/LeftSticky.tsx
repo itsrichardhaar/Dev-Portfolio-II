@@ -1,3 +1,4 @@
+// components/LeftSticky.tsx
 "use client";
 
 import { motion } from "framer-motion";
@@ -14,9 +15,14 @@ export default function LeftSticky({
   onNavClick: (id: string) => void;
 }) {
   return (
-    <div className="sticky top-4 lg:top-6 h-[100dvh] flex flex-col gap-6 py-4 lg:py-8">
+    <div
+      className={[
+        "flex flex-col gap-3 py-3",
+        "lg:sticky lg:top-6 lg:h-[100svh] lg:gap-6 lg:py-8",
+      ].join(" ")}
+    >
       {/* Heading / bio */}
-      <div>
+      <div className="mt-6 lg:mt-0">
         <motion.h1
           initial={{ opacity: 0, y: 10 }}
           animate={{ opacity: 1, y: 0 }}
@@ -25,33 +31,37 @@ export default function LeftSticky({
         >
           Richard Haar
         </motion.h1>
-        <p className="mt-3 max-w-md text-lg font-semibold text-neutral-600 dark:text-neutral-400">
+        <p className="mt-2 lg:mt-3 max-w-md text-base sm:text-lg font-semibold text-neutral-600 dark:text-neutral-400">
           Senior Web Developer.
         </p>
       </div>
 
-      {/* Scrollspy nav */}
-      <nav className="mt-15 hidden lg:block">
-        <ul className="space-y-2">
+      {/* Scrollspy nav — visible on mobile, same styling on desktop */}
+      <nav className="mt-1 lg:mt-[3.75rem]"> {/* replaces mt-15 */}
+        <ul className="space-y-1 lg:space-y-2">
           {sections.map((s) => (
             <li key={s.id}>
               <button
                 onClick={() => onNavClick(s.id)}
-                className={
-                  "group flex w-full items-center gap-3 rounded px-2 py-2 text-left transition " +
-                  (active === s.id
-                    ? "font-bold text-neutral-900 dark:text-white uppercase cursor-pointer"
-                    : "text-copy hover:text-neutral-900 dark:text-neutral-400 dark:hover:text-white uppercase cursor-pointer")
-                }
+                className={[
+                  // mobile-compact, desktop original
+                  "group flex w-full items-center rounded text-left transition uppercase cursor-pointer",
+                  "gap-2 px-1.5 py-1.5 text-sm",
+                  "lg:gap-3 lg:px-2 lg:py-2 lg:text-base",
+                  active === s.id
+                    ? "font-bold text-neutral-900 dark:text-white"
+                    : "text-copy hover:text-neutral-900 dark:text-neutral-400 dark:hover:text-white",
+                ].join(" ")}
               >
                 <span
-                  className={
-                    "h-px w-8 shrink-0 transition-all " +
-                    (active === s.id
-                      ? "bg-neutral-900 dark:bg-white w-10"
-                      : "bg-neutral-300 dark:bg-neutral-700")
-                  }
                   aria-hidden
+                  className={[
+                    "h-px shrink-0 transition-all",
+                    // narrower line on mobile, your original on lg
+                    active === s.id
+                      ? "bg-neutral-900 dark:bg-white w-8 lg:w-10"
+                      : "bg-neutral-300 dark:bg-neutral-700 w-6 lg:w-8",
+                  ].join(" ")}
                 />
                 {s.label}
               </button>
@@ -60,9 +70,9 @@ export default function LeftSticky({
         </ul>
       </nav>
 
-      {/* Socials */}
-      <div className="mt-auto mb-4 lg:mb-6">
-        <ul className="flex gap-4 text-neutral-500">
+      {/* Socials — inline on mobile; pinned bottom only on desktop */}
+      <div className="pt-1 lg:mt-auto mb-3 lg:mb-6">
+        <ul className="flex flex-wrap gap-x-3 gap-y-2 text-sm lg:text-base text-neutral-500">
           <li>
             <a
               href="#"
@@ -98,5 +108,6 @@ export default function LeftSticky({
     </div>
   );
 }
+
 
 

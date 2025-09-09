@@ -47,7 +47,7 @@ function ProjectCardImpl({ project }: { project: Project }) {
           "group rounded-xl border border-border/80 pr-5 pl-0 pt-5 pb-5 first:border-0",
           // compositing & paint-friendly hover
           "transition-colors duration-200",
-          "hover:bg-neutral-50/60 dark:hover:bg-neutral-900/40",
+          "hover:bg-[rgba(45,212,191,0.1)]",
           "hover:border-neutral-300 dark:hover:border-neutral-700",
         ].join(" ")}
       >
@@ -86,7 +86,7 @@ function ProjectCardImpl({ project }: { project: Project }) {
           {/* Text side */}
           <div className="min-w-0 flex-1">
             <header className="flex flex-col sm:flex-row sm:items-baseline sm:justify-between">
-              <h3 className="truncate text-[1.05rem] font-semibold tracking-tight text-heading">
+              <h3 className="truncate text-[1.05rem] font-semibold tracking-tight text-copy">
                 {project.title}
               </h3>
               {project.year ? (

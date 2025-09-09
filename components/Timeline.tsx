@@ -151,8 +151,8 @@ export default function Timeline({
                 "my-1.5 sm:my-2",
                 "transition-all duration-200",
                 isActive
-                  ? "border-neutral-300 bg-neutral-50/70 dark:border-neutral-700 dark:bg-neutral-900/40"
-                  : "hover:border-neutral-300 hover:bg-neutral-50/70 dark:hover:border-neutral-700 dark:hover:bg-neutral-900/40",
+                  ? "border-neutral-300 bg-neutral-50/70 dark:border-neutral-700 dark:bg-[rgba(45,212,191,0.1)]"
+                  : "hover:border-neutral-300 hover:bg-neutral-50/70 dark:hover:border-neutral-700 dark:hover:bg-[rgba(45,212,191,0.1)]",
                 it.href
                   ? "cursor-pointer focus:outline-none focus-visible:ring-2 focus-visible:ring-emerald-400/70"
                   : "",
