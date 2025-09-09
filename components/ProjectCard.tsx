@@ -1,49 +1,86 @@
 // components/ProjectCard.tsx
 import Link from "next/link";
+import Image from "next/image";
+import { memo } from "react";
 import type { Project } from "@/data/projects";
 
-export default function ProjectCard({ project }: { project: Project }) {
-  const internalHref =
-    project.slug && !project.link ? `/projects/${project.slug}` : null;
+type WrapperProps = {
+  href?: string | null;
+  external?: string | null;
+  children: React.ReactNode;
+};
 
-  const Wrapper = ({ children }: { children: React.ReactNode }) =>
-    internalHref ? (
-      <Link href={internalHref} className="block w-full no-underline">
+function CardLinkWrapper({ href, external, children }: WrapperProps) {
+  if (href) {
+    return (
+      <Link href={href} className="block w-full no-underline">
         {children}
       </Link>
-    ) : project.link ? (
+    );
+  }
+  if (external) {
+    return (
       <a
-        href={project.link}
+        href={external}
         target="_blank"
         rel="noreferrer"
         className="block w-full no-underline"
       >
         {children}
       </a>
-    ) : (
-      <div className="block w-full">{children}</div>
     );
+  }
+  return <div className="block w-full">{children}</div>;
+}
 
-  // Use the first image if provided
+function ProjectCardImpl({ project }: { project: Project }) {
+  const internalHref =
+    project.slug && !project.link ? `/projects/${project.slug}` : null;
+  const externalHref = project.link ?? null;
   const thumb = project.images?.[0];
 
   return (
-    <Wrapper>
-      <article className="group border-t border-border rounded-xl pr-5 pt-5 pb-5 pl-0 first:border-0 transition-all hover:bg-[rgba(30,41,59,.5)]">
+    <CardLinkWrapper href={internalHref} external={externalHref}>
+      <article
+        className={[
+          // layout & spacing
+          "group rounded-xl border border-border/80 pr-5 pl-0 pt-5 pb-5 first:border-0",
+          // compositing & paint-friendly hover
+          "transition-colors duration-200",
+          "hover:bg-neutral-50/60 dark:hover:bg-neutral-900/40",
+          "hover:border-neutral-300 dark:hover:border-neutral-700",
+        ].join(" ")}
+      >
         <div className="flex items-start gap-4">
-          {/* Thumbnail */}
-          <div className="relative shrink-0 overflow-hidden rounded-lg border border-border/60">
-            {/* fixed box to prevent layout shift; tweak size to taste */}
-            <div className="h-20 w-28 sm:h-28 sm:w-36 bg-white/5" />
+          {/* Thumbnail (own layer, no layout shift) */}
+          <div
+            className={[
+              "relative shrink-0 overflow-hidden rounded-lg border border-border/60",
+              // fixed box prevents CLS
+              "h-20 w-28 sm:h-28 sm:w-36",
+              // promote to separate layer so parent repaints don’t flash the image
+              "transform-gpu will-change-transform [backface-visibility:hidden]",
+              // ensure smoother scaling on some GPUs
+              "[transform:translateZ(0)]",
+            ].join(" ")}
+          >
             {thumb ? (
-              // eslint-disable-next-line @next/next/no-img-element
-              <img
+              <Image
                 src={thumb.src}
                 alt={thumb.alt ?? project.title}
-                loading="lazy"
-                className="absolute inset-0 h-full w-full object-cover"
+                fill
+                sizes="(min-width: 1024px) 12rem, 9rem"
+                // user-perceived stability
+                priority={false}
+                placeholder="empty" // switch to 'blur' if you add blurDataURL
+                // performance hints
+                decoding="async"
+                className="object-cover select-none"
+                draggable={false}
               />
-            ) : null}
+            ) : (
+              <div className="h-full w-full bg-white/5" />
+            )}
           </div>
 
           {/* Text side */}
@@ -60,7 +97,7 @@ export default function ProjectCard({ project }: { project: Project }) {
             </header>
 
             {project.summary && (
-              <p className="mt-1.5 text-[0.95rem] leading-6 mr-10">
+              <p className="mt-1.5 mr-10 text-[0.95rem] leading-6">
                 {project.summary}
               </p>
             )}
@@ -70,9 +107,7 @@ export default function ProjectCard({ project }: { project: Project }) {
                 {project.builtWith.map((t) => (
                   <li
                     key={t}
-                    className="rounded-full px-2.5 py-1 text-[11px] leading-none
-                               bg-[rgba(45,212,191,0.1)] text-[rgb(94,234,212)]
-                               border border-[rgba(45,212,191,0.25)]"
+                    className="rounded-full border border-[rgba(45,212,191,0.25)] bg-[rgba(45,212,191,0.1)] px-2.5 py-1 text-[11px] leading-none text-[rgb(94,234,212)]"
                   >
                     {t}
                   </li>
@@ -82,9 +117,12 @@ export default function ProjectCard({ project }: { project: Project }) {
           </div>
         </div>
       </article>
-    </Wrapper>
+    </CardLinkWrapper>
   );
 }
+
+export default memo(ProjectCardImpl);
+
 
 
 

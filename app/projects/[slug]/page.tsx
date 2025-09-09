@@ -43,7 +43,7 @@ export default async function ProjectPage({ params }: Props) {
     <div className="mx-auto max-w-3xl px-4 py-12 sm:px-6">
       <Link
         href="/"
-        className="text-sm text-neutral-600 underline-offset-4 hover:underline dark:text-neutral-400"
+        className="link-underline text-sm text-neutral-600 underline-offset-4 dark:text-neutral-400 no-underline"
       >
         ← Back to home
       </Link>
@@ -123,7 +123,7 @@ export default async function ProjectPage({ params }: Props) {
           </a>
         ) : null}
         <Link
-          className="rounded-md border border-neutral-300 px-3 py-1.5 text-sm hover:bg-neutral-100 dark:border-neutral-700 dark:hover:bg-neutral-900"
+          className="link-underline no-underline rounded-md border border-neutral-300 px-3 py-1.5 text-sm hover:bg-neutral-100 dark:border-neutral-700 dark:hover:bg-neutral-900"
           href="/archive"
         >
           View archive

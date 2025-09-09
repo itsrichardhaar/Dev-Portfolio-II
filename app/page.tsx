@@ -68,7 +68,7 @@ export default function HomePage() {
             title="Experience"
             className={[
               "rounded-xl transition-colors",
-              expHover ? "bg-neutral-50 dark:bg-neutral-900/40" : "bg-transparent",
+              expHover ? "bg-transparent" : "bg-transparent",
             ].join(" ")}
           >
       <Timeline
@@ -111,7 +111,7 @@ export default function HomePage() {
       />
 
       <div className="mt-8">
-        <Link href="/" className="text-sm font-medium text-copy">
+        <Link href="/" className="link-underline text-sm font-medium text-copy no-underline">
           View full resume →
         </Link>
       </div>
@@ -132,7 +132,7 @@ export default function HomePage() {
             <div className="mt-8">
               <Link
                 href="/"
-                className="text-sm font-medium text-copy"
+                className="link-underline text-sm font-medium text-copy no-underline"
               >
               View full project archive →
               </Link>

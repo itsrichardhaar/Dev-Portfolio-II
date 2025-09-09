@@ -14,7 +14,7 @@ export default function LeftSticky({
   onNavClick: (id: string) => void;
 }) {
   return (
-    <div className="sticky top-4 lg:top-6 h-[100dvh] flex flex-col gap-6 py-4 lg:py-6">
+    <div className="sticky top-4 lg:top-6 h-[100dvh] flex flex-col gap-6 py-4 lg:py-8">
       {/* Heading / bio */}
       <div>
         <motion.h1
@@ -25,7 +25,7 @@ export default function LeftSticky({
         >
           Richard Haar
         </motion.h1>
-        <p className="mt-3 max-w-md text-lg text-neutral-600 dark:text-neutral-400">
+        <p className="mt-3 max-w-md text-lg font-semibold text-neutral-600 dark:text-neutral-400">
           Senior Web Developer.
         </p>
       </div>
@@ -40,8 +40,8 @@ export default function LeftSticky({
                 className={
                   "group flex w-full items-center gap-3 rounded px-2 py-2 text-left transition " +
                   (active === s.id
-                    ? "font-semibold text-neutral-900 dark:text-white uppercase"
-                    : "text-copy hover:text-neutral-900 dark:text-neutral-400 dark:hover:text-white uppercase")
+                    ? "font-bold text-neutral-900 dark:text-white uppercase cursor-pointer"
+                    : "text-copy hover:text-neutral-900 dark:text-neutral-400 dark:hover:text-white uppercase cursor-pointer")
                 }
               >
                 <span

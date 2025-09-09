@@ -7,6 +7,42 @@
   --color-copy: rgb(148, 163, 184); /* muted body text */
 }
 
+@layer components {
+  /* turn OFF the native underline */
+  .link-underline {
+    text-decoration: none;              /* <-- important */
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.25rem;
+    text-underline-offset: 4px;
+
+    /* animated underline via background */
+    background-image: linear-gradient(currentColor, currentColor);
+    background-repeat: no-repeat;
+    background-size: 0% 1px;            /* start hidden */
+    background-position: 0 100%;
+    transition: background-size 200ms ease;
+  }
+
+  .link-underline:hover,
+  .link-underline:focus-visible {
+    background-size: 100% 1px;          /* grow underline */
+  }
+
+  /* thicker variant (optional) */
+  .link-underline-2 { background-size: 0% 2px; }
+  .link-underline-2:hover,
+  .link-underline-2:focus-visible { background-size: 100% 2px; }
+
+  /* If using @tailwind/typography (.prose), it underlines a tags by default.
+     This ensures .link-underline wins inside .prose blocks. */
+  .prose :where(a.link-underline) {
+    text-decoration: none !important;
+  }
+}
+
+
 
 /* --- Type rhythm & link styling --- */
 :root {

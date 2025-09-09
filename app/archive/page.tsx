@@ -15,11 +15,11 @@ export default function ArchivePage() {
     <div className="mx-auto max-w-5xl px-4 py-12 sm:px-6">
        <Link
         href="/"
-        className="text-sm text-neutral-600 underline-offset-4 hover:underline dark:text-neutral-400"
+        className="link-underline text-sm text-neutral-600 no-underlinee dark:text-neutral-400"
       >
         ← Back to home
       </Link>
-      <h1 className="text-3xl font-bold tracking-tight">Project Archive</h1>
+      <h1 className="text-4xl mt-10 font-bold tracking-tight">Project Archive</h1>
       <p className="mt-2 text-neutral-600 dark:text-neutral-400">
         A list of things I’ve worked on over the years.
       </p>
@@ -66,7 +66,7 @@ export default function ArchivePage() {
                       href={p.link}
                       target="_blank"
                       rel="noreferrer"
-                      className="underline underline-offset-2"
+                      className="link-underline no-underline"
                     >
                       Visit ↗
                     </a>
