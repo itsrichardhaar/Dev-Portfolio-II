@@ -18,8 +18,8 @@ export default function HomePage() {
     []
   );
 
-  const scrollRef = useRef<HTMLDivElement | null>(null);
-  const { active } = useScrollSpy(scrollRef, sections); // 👈 active comes from the hook
+  const scrollRef = useRef<HTMLElement | null>(null);
+  const { active } = useScrollSpy(scrollRef, sections);
 
   const onNavClick = (id: string) => {
     const root = scrollRef.current;
