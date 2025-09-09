@@ -1,19 +1,18 @@
 // components/Section.tsx
 import { ReactNode } from "react";
 
-export default function Section({
-  id,
-  title,
-  subtitle,
-  children,
-}: {
+type Props = {
   id: string;
   title: string;
   subtitle?: string;
   children: ReactNode;
-}) {
+  className?: string; // NEW
+};
+
+export default function Section({ id, title, subtitle, children, className }: Props) {
+  const base = "scroll-mt-16 py-10";
   return (
-    <section id={id} className="scroll-mt-16 py-10">
+    <section id={id} className={className ? `${base} ${className}` : base}>
       <h2 className="text-heading text-2xl font-bold tracking-tight sm:text-3xl">
         {title}
       </h2>
@@ -28,3 +27,4 @@ export default function Section({
     </section>
   );
 }
+

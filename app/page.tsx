@@ -1,15 +1,17 @@
 // app/page.tsx
 "use client";
 
-import { useMemo, useRef } from "react";
+import { useMemo, useRef, useState } from "react";
 import LeftSticky from "../components/LeftSticky";
 import Section from "../components/Section";
 import Timeline from "../components/Timeline";
 import ProjectCard from "../components/ProjectCard";
 import { projects } from "../data/projects";
 import useScrollSpy from "../components/useScrollSpy";
+import Link from "next/link";
 
 export default function HomePage() {
+  const [expHover, setExpHover] = useState(false);
   const sections = useMemo(
     () => [
       { id: "about", label: "About" },
@@ -61,39 +63,59 @@ export default function HomePage() {
           </Section>
 
           {/* Experience */}
-          <Section id="experience" title="Experience">
-            <Timeline
-              items={[
-                {
-                  role: "Senior Web Developer",
-                  org: "Springer Studios",
-                  time: "2025 — Present",
-                  bullets: [
-                    "Rebuilt marketing site with Next.js; 95+ Core Web Vitals.",
-                    "Authored component library used across product teams.",
-                  ],
-                },
-                {
-                  role: "Web Developer",
-                  org: "Springer Studios",
-                  time: "2022 — 2025",
-                  bullets: [
-                    "Introduced design system and a11y audits.",
-                    "Shipped analytics dashboard with realtime data.",
-                  ],
-                },
-                {
-                  role: "Web Developer & Digital Marketing Specialist",
-                  org: "HighClick Media",
-                  time: "2019 — 2022",
-                  bullets: [
-                    "Introduced design system and a11y audits.",
-                    "Shipped analytics dashboard with realtime data.",
-                  ],
-                },
-              ]}
-            />
-          </Section>
+          <Section
+            id="experience"
+            title="Experience"
+            className={[
+              "rounded-xl transition-colors",
+              expHover ? "bg-neutral-50 dark:bg-neutral-900/40" : "bg-transparent",
+            ].join(" ")}
+          >
+      <Timeline
+        onItemHover={setExpHover}
+        items={[
+          {
+            role: "Senior Web Developer",
+            org: "Springer Studios",
+            time: "2025 — Present",
+            bullets: [
+              "Rebuilt marketing site with Next.js; 95+ Core Web Vitals.",
+              "Authored component library used across product teams.",
+            ],
+            href: "https://springerstudios.com", 
+            external: true,                    
+          },
+          {
+            role: "Web Developer",
+            org: "Springer Studios",
+            time: "2022 — 2025",
+            bullets: [
+              "Introduced design system and a11y audits.",
+              "Shipped analytics dashboard with realtime data.",
+            ],
+            href: "https://springerstudios.com", 
+            external: true,  
+          },
+          {
+            role: "Developer & Digital Marketing Specialist",
+            org: "HighClick Media",
+            time: "2019 — 2022",
+            bullets: [
+              "Introduced design system and a11y audits.",
+              "Shipped analytics dashboard with realtime data.",
+            ],
+            href: "https://dtinetworks.com", 
+            external: true,  
+          },
+        ]}
+      />
+
+      <div className="mt-8">
+        <Link href="/" className="text-sm font-medium text-copy">
+          View full resume →
+        </Link>
+      </div>
+    </Section>
 
           {/* Projects */}
           <Section
@@ -108,9 +130,12 @@ export default function HomePage() {
             </div>
 
             <div className="mt-8">
-              <a href="/archive" className="text-sm font-medium text-copy">
-                View full project archive →
-              </a>
+              <Link
+                href="/"
+                className="text-sm font-medium text-copy"
+              >
+              View full project archive →
+              </Link>
             </div>
           </Section>
         </div>
