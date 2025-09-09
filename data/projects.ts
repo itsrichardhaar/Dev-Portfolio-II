@@ -46,6 +46,16 @@ export const projects: Project[] = [
     builtWith: ["React", "Three.js", "TypeScript"],
     link: "https://built-rite-model-configurator-59t1.vercel.app",
     featured: true,
+    description: [
+    "Led a ground-up redesign focused on performance, accessibility, and maintainability.",
+    "Built a modular component and template system."
+  ],
+  highlights: [
+    "95+ Core Web Vitals across pages",
+    "Edge-rendered pages with fast TTFB",
+    "Accessible components with testing"
+  ],
+  images: [{ src: "/images/BuiltRite-Demo.png", alt: "BuiltRite Model" }]
   },
   {
     slug: "builtrite-storage-systems-website",
@@ -66,7 +76,7 @@ export const projects: Project[] = [
     madeAt: "Springer Studios",
     builtWith: ["WordPress" ,"PHP", "JavaScript", "mySQL"],
     link: "https://cvcc.edu/programs-of-study/",
-    featured: false, // will only show on Archive
+    featured: false, 
   },
   {
     slug: "cvcc-program-filter",
@@ -74,10 +84,20 @@ export const projects: Project[] = [
     year: 2025,
     summary:
       "UI system built to help CVCC students find specific programs of study.",
-    madeAt: "Startup XYZ",
+    madeAt: "Springer Studios",
     builtWith: ["PHP", "JavaScript", "mySQL"],
     link: "https://cvcc.edu/programs-of-study/",
-    featured: true, // will only show on Archive
+    featured: true, 
+    description: [
+    "Led a ground-up redesign focused on performance, accessibility, and maintainability.",
+    "Built a modular component and template system."
+  ],
+  highlights: [
+    "95+ Core Web Vitals across pages",
+    "Edge-rendered pages with fast TTFB",
+    "Accessible components with testing"
+  ],
+  images: [{ src: "/images/Programs-Filter.png", alt: "CVCC Programs Filter" }]
   },
   {
     slug: "design-system",
@@ -85,9 +105,9 @@ export const projects: Project[] = [
     year: 2023,
     summary:
       "Reusable components, design tokens, documentation adopted across teams.",
-    madeAt: "Startup XYZ",
+    madeAt: "Springer Studios",
     builtWith: ["Storybook", "TypeScript"],
     link: "https://example.com",
-    featured: true, // will only show on Archive
+    featured: true, 
   },
 ];
