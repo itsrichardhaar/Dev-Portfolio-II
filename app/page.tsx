@@ -51,11 +51,16 @@ export default function HomePage() {
           {/* About */}
           <Section id="about" title="About">
             <p>
-              I’m a senior web developer and marketing analyst with 6 years of experience 
-              in web application programming, digital marketing and brand development. 
-              I excel in cross-functional collaboration to provide innovative, high-quality products and services. 
-              My unique blend of technical expertise and analytical marketing insight enables me to enhance user-experience, 
-              optimize performance, and drive business growth across multi-channel marketing strategies and campaigns.
+              I’m an experienced full-stack developer and marketing specialist with 6+ years of experience 
+              programming scalable web-applications and driving measurable results through SEO, 
+              analytics, and cross-functional collaboration. Skilled in modern JavaScript frameworks, 
+              CMS platforms, and cloud hosting environments. Proven ability to translate complex technical and 
+              marketing data into actionable business growth strategies. Adept at leading projects from concept to 
+              deployment in client-facing environments.
+
+            </p>
+            <p className="mt-4">
+              My primary focus is managing the development team at at Springer Studios and contributing to the development of accessible, user-centric interfaces and digital experiences for our clients.
             </p>
             <p className="mt-4">
               In my spare time, I’m usually skiing in the rockies, or hanging somewhere in OBX. My home bases are in Wilmington and Raleigh, NC.
