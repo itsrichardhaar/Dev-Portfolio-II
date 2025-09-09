@@ -98,7 +98,7 @@ export const projects: Project[] = [
     madeAt: "Springer Studios",
     builtWith: ["Storybook", "TypeScript"],
     link: "https://example.com",
-    featured: true, 
+    featured: false, 
   },
   { 
     slug: "carteret-community-college", 

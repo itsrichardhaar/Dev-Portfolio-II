@@ -58,7 +58,7 @@ export default function HomePage() {
               optimize performance, and drive business growth across multi-channel marketing strategies and campaigns.
             </p>
             <p className="mt-4">
-              I care about design systems, performance, and progressive enhancement.
+              In my spare time, I'm usually skiing in the rockies, or hanging somewhere in OBX. My home bases are in Wilmington and Raleigh, NC.
             </p>
           </Section>
 
@@ -79,8 +79,10 @@ export default function HomePage() {
             org: "Springer Studios",
             time: "2025 — Present",
             bullets: [
-              "Rebuilt marketing site with Next.js; 95+ Core Web Vitals.",
-              "Authored component library used across product teams.",
+              "Led development team, year to date, in the build and deployment of 20 websites and applications.",
+              "Introduced a modern, headless CMS application stack into our client offerings.",
+              "Build, style, and ship high-quality websites, mobile apps, and design systems.",
+              "Spearhead company-wide accessibility initiatives such as creating documentation for best practices, establishing a standard accessibility checklist for developers, and facilitating knowledge shares to clients. ",
             ],
             href: "https://springerstudios.com", 
             external: true,                    
@@ -90,8 +92,8 @@ export default function HomePage() {
             org: "Springer Studios",
             time: "2022 — 2025",
             bullets: [
-              "Introduced design system and a11y audits.",
-              "Shipped analytics dashboard with realtime data.",
+              "Build, style, and ship high-quality websites, mobile apps, and design systems.",
+              "Shipped wholesale ecommerce dashboard with daily order updates to multiple storefronts.",
             ],
             href: "https://springerstudios.com", 
             external: true,  
