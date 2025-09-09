@@ -39,13 +39,13 @@ export default function HomePage() {
 
   return (
     <div className="mx-auto grid lg:h-screen max-w-6xl grid-cols-1 gap-0 px-4 sm:px-6 lg:grid-cols-12 lg:gap-8 lg:overflow-hidden">
-      <aside className="lg:col-span-5 lg:py-16">
+      <aside className="lg:col-span-5 lg:py-16 relative z-0">
         <LeftSticky sections={sections} active={activeId} onNavClick={onNavClick} />
       </aside>
 
       <main
         ref={scrollRef}
-        className="scrollport relative lg:col-span-7 lg:h-screen lg:min-h-0 lg:overflow-y-auto lg:py-16 lg:pr-6 [scrollbar-gutter:stable]"
+        className="scrollport relative z-10 lg:col-span-7 lg:h-screen lg:min-h-0 lg:overflow-y-auto lg:py-16 lg:pr-6 [scrollbar-gutter:stable]"
       >
         <div className="py-10 lg:py-0">
           {/* About */}
