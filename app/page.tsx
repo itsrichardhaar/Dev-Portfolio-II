@@ -1,51 +1,34 @@
 "use client";
 
-import { useEffect, useMemo, useRef, useState } from "react";
+import { useMemo, useRef } from "react";
 import LeftSticky from "../components/LeftSticky";
 import Section from "../components/Section";
 import Timeline from "../components/Timeline";
-import ProjectCard from "../components/ProjectCard"; // NEW
-import { projects } from "../data/projects";         // NEW
+import ProjectCard from "../components/ProjectCard";
+import { projects } from "../data/projects";
+import useScrollSpy from "../components/useScrollSpy"; // 👈 use the hook
 
 export default function HomePage() {
   const sections = useMemo(
     () => [
       { id: "about", label: "About" },
       { id: "experience", label: "Experience" },
-      { id: "projects", label: "Projects" }, // NEW
+      { id: "projects", label: "Projects" },
     ],
     []
   );
 
-  const [active, setActive] = useState(sections[0].id);
   const scrollRef = useRef<HTMLDivElement | null>(null);
-
-  useEffect(() => {
-    const root = scrollRef.current;
-    if (!root) return;
-
-    const obs = new IntersectionObserver(
-      (entries) => {
-        const visible = entries
-          .filter((e) => e.isIntersecting)
-          .sort((a, b) => a.boundingClientRect.top - b.boundingClientRect.top);
-        if (visible[0]) setActive(visible[0].target.id);
-      },
-      { root, rootMargin: "0px 0px -60% 0px", threshold: [0.1, 0.25, 0.5] }
-    );
-
-    sections.forEach(({ id }) => {
-      const el = root.querySelector<HTMLElement>(`#${id}`);
-      if (el) obs.observe(el);
-    });
-
-    return () => obs.disconnect();
-  }, [sections]);
+  const { active } = useScrollSpy(scrollRef, sections); // 👈 active comes from the hook
 
   const onNavClick = (id: string) => {
     const root = scrollRef.current;
     const el = root?.querySelector<HTMLElement>(`#${id}`);
-    if (root && el) root.scrollTo({ top: el.offsetTop - 16, behavior: "smooth" });
+    if (!root || !el) return;
+    const rootTop = root.getBoundingClientRect().top;
+    const elTop = el.getBoundingClientRect().top;
+    const target = root.scrollTop + (elTop - rootTop) - 16; // same offset
+    root.scrollTo({ top: Math.max(0, Math.round(target)), behavior: "smooth" });
   };
 
   // Featured only for homepage
@@ -54,10 +37,13 @@ export default function HomePage() {
   return (
     <div className="mx-auto grid lg:h-screen max-w-6xl grid-cols-1 gap-0 px-4 sm:px-6 lg:grid-cols-12 lg:gap-8 lg:overflow-hidden">
       <aside className="lg:col-span-5 lg:py-16">
-        <LeftSticky sections={sections} active={active} onNavClick={onNavClick} />
+        <LeftSticky sections={sections} active={active!} onNavClick={onNavClick} />
       </aside>
 
-      <main ref={scrollRef} className="scrollport relative lg:col-span-7 lg:h-screen lg:min-h-0 lg:overflow-y-auto lg:py-16 lg:pr-6 [scrollbar-gutter:stable]">
+      <main
+        ref={scrollRef}
+        className="scrollport relative lg:col-span-7 lg:h-screen lg:min-h-0 lg:overflow-y-auto lg:py-16 lg:pr-6 [scrollbar-gutter:stable]"
+      >
         <div className="py-10 lg:py-0">
           {/* About */}
           <Section id="about" title="About">
@@ -134,5 +120,7 @@ export default function HomePage() {
     </div>
   );
 }
+
+
 
 
