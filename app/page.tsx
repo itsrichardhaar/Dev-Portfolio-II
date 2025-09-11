@@ -60,10 +60,20 @@ export default function HomePage() {
 
             </p>
             <p className="mt-4">
-              My primary focus is managing the development team at at Springer Studios and contributing to the development of accessible, user-centric interfaces and digital experiences for our clients.
+              My primary focus is managing the development team at{" "}
+              <a
+                href="https://springerstudios.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-white no-underline hover:underline"
+              >
+                Springer Studios
+              </a>{" "}
+              and contributing to the development of accessible, user-centric interfaces and digital experiences for our clients.
             </p>
+
             <p className="mt-4">
-              In my spare time, I’m usually skiing in the rockies, or hanging somewhere in OBX. My home bases are in Wilmington and Raleigh, NC.
+              In my spare time, I’m usually skiing in the rockies, or hanging somewhere in OBX. My home base is split between Wilmington and Raleigh, NC.
             </p>
           </Section>
 
@@ -138,7 +148,7 @@ export default function HomePage() {
 
             <div className="mt-8">
               <Link
-                href="/"
+                href="/archive"
                 className="link-underline text-sm font-medium text-copy no-underline"
               >
               View full project archive →

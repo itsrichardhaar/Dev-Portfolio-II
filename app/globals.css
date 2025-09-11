@@ -53,6 +53,7 @@
   line-height: 1.7;
   letter-spacing: 0.005em;
 }
+/*
 .prose :where(a):not(:where(.not-prose *)) {
   text-decoration: underline;
   text-underline-offset: 3px;

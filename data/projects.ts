@@ -22,7 +22,7 @@ export const projects: Project[] = [
     year: 2025,
     summary: "Configure your own storage unit model.",
     madeAt: "Springer Studios",
-    builtWith: ["React", "Three.js", "TypeScript"],
+    builtWith: ["React", "Three.js", "TypeScript", "JavaScript"],
     link: "https://built-rite-model-configurator-59t1.vercel.app",
     featured: true,
     description: [
@@ -64,7 +64,7 @@ export const projects: Project[] = [
     summary:
       "A project and task management for our internal teams to utilize and test.",
     madeAt: "Springer Studios", 
-    builtWith: ["React", "Postgres", "AWS"], 
+    builtWith: ["TypeScript", "JavaScript", "React", "PostgreSQL"], 
     link: "https://main.dp9uus28slxd2.amplifyapp.com/", 
     featured: false 
   },
@@ -271,7 +271,7 @@ export const projects: Project[] = [
     summary:
       "Built and deployed a full redesign for Bladen Community College.",
     madeAt: "Springer Studios", 
-    builtWith: ["WordPress", "PHP", "JavaScript", "MySQL"], 
+    builtWith: ["WordPress", "PHP", "JavaScript", "mySQL"], 
     link: "https://www.bladencc.edu", 
     featured: false 
   },
@@ -282,7 +282,7 @@ export const projects: Project[] = [
   summary:
     "Built and deployed a full redesign for James Sprunt Community College.",
   madeAt: "Springer Studios",
-  builtWith: ["WordPress", "PHP", "JavaScript", "MySQL"],
+  builtWith: ["WordPress", "PHP", "JavaScript", "mySQL"],
   link: "https://jamessprunt.edu", // update to the real URL if different
   featured: false,
 },
@@ -293,7 +293,7 @@ export const projects: Project[] = [
     summary:
       "Collaborated on an overhaul of the Programs of Study structure and Course Registration API.",
     madeAt: "Springer Studios", 
-    builtWith: ["WordPress", "PHP", "JavaScript", "MySQL", "Rest API"], 
+    builtWith: ["WordPress", "PHP", "JavaScript", "mySQL", "Rest API"], 
     link: "https://cfcc.edu/", 
     featured: false 
   },
