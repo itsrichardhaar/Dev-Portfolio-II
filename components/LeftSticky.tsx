@@ -37,7 +37,7 @@ export default function LeftSticky({
       </div>
 
       {/* Scrollspy nav — visible on mobile, same styling on desktop */}
-      <nav className="mt-1 lg:mt-[3.75rem]"> {/* replaces mt-15 */}
+      <nav className="hidden lg:block lg:mt-[3.75rem]"> {/* replaces mt-15 */}
         <ul className="space-y-1 lg:space-y-2">
           {sections.map((s) => (
             <li key={s.id}>
