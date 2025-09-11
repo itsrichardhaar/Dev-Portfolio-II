@@ -4,10 +4,10 @@ import { useCallback, useState, type ReactNode } from "react";
 export type TimelineItem = {
   role: string;
   org: string;
-  time: string;        
+  time: string;
   bullets?: string[];
-  href?: string;       
-  external?: boolean;  
+  href?: string;
+  external?: boolean;
 };
 
 type RowWrapperProps = {
@@ -84,7 +84,6 @@ export default function Timeline({
   leftWidthClass?: string;
 }) {
   const [hovered, setHovered] = useState<number | null>(null);
-
   const enter = useCallback(() => onItemHover?.(true), [onItemHover]);
   const leave = useCallback(() => onItemHover?.(false), [onItemHover]);
 
@@ -97,19 +96,33 @@ export default function Timeline({
         return (
           <li
             key={`${it.role}-${it.time}-${idx}`}
-            className="grid grid-cols-[auto_1fr] gap-x-2 sm:gap-x-3"
+            className="relative lg:grid lg:grid-cols-[auto_1fr] lg:gap-x-3"
           >
-            {/* LEFT column: rail + dot + time */}
-            <div className={`relative ${leftWidthClass}`}>
-              {/* rail segment (stop at last) */}
+            {/* MOBILE rail segment & dot (absolute) */}
+            {!isLast && (
+              <span
+                aria-hidden="true"
+                className="absolute left-3 top-5 bottom-[-1.25rem] w-px bg-neutral-200 dark:bg-neutral-800 lg:hidden"
+              />
+            )}
+            <span
+              aria-hidden="true"
+              className={[
+                "absolute left-3 top-4 h-2 w-2 -translate-x-1/2 rounded-full transition-all duration-200 lg:hidden",
+                isActive
+                  ? "bg-emerald-500 ring-4 ring-emerald-200/80 dark:ring-emerald-900/70 scale-110"
+                  : "bg-emerald-400 ring-2 ring-emerald-200 dark:ring-emerald-900 scale-100",
+              ].join(" ")}
+            />
+
+            {/* DESKTOP left column: rail + dot + time */}
+            <div className={`relative ${leftWidthClass} hidden pb-5 lg:block`}>
               {!isLast && (
                 <span
                   aria-hidden="true"
                   className="absolute left-3 top-5 bottom-[-1.25rem] w-px bg-neutral-200 dark:bg-neutral-800"
                 />
               )}
-
-              {/* dot (lights up when the card is hovered/focused) */}
               <span
                 aria-hidden="true"
                 className={[
@@ -119,14 +132,17 @@ export default function Timeline({
                     : "bg-emerald-400 ring-2 ring-emerald-200 dark:ring-emerald-900 scale-100",
                 ].join(" ")}
               />
-
-              {/* time label */}
               <div className="pl-6 pt-3 text-xs sm:text-sm text-neutral-500">
                 {it.time}
               </div>
             </div>
 
-            {/* RIGHT column: clickable card */}
+            {/* MOBILE: date above card, aligned to rail, card full-width with left gutter */}
+            <div className="pl-10 lg:hidden">
+              <div className="pt-2 text-xs text-neutral-500">{it.time}</div>
+            </div>
+
+            {/* Card (mobile: pl-10 to clear rail; desktop: grid col 2) */}
             <RowWrapper
               href={it.href}
               external={it.external}
@@ -147,12 +163,16 @@ export default function Timeline({
                 leave();
               }}
               className={[
-                "block rounded-lg border border-transparent px-3 py-3.5 md:px-4 md:py-4",
-                "my-1.5 sm:my-2",
+                "mt-1 lg:mt-0",
+                "block w-full rounded-lg border border-transparent",
+                // mobile: tuck near rail, full-width feel
+                "pl-10 pr-3 py-3.5",
+                // desktop: original paddings
+                "lg:pl-4 lg:pr-4 lg:py-4",
                 "transition-all duration-200",
                 isActive
-                  ? "border-neutral-300 bg-neutral-50/70 dark:border-neutral-700 dark:bg-[rgba(45,212,191,0.1)]"
-                  : "hover:border-neutral-300 hover:bg-neutral-50/70 dark:hover:border-neutral-700 dark:hover:bg-[rgba(45,212,191,0.1)]",
+                  ? "border-neutral-300 bg-neutral-50/70 dark:border-neutral-700 dark:bg-neutral-900/40"
+                  : "hover:border-neutral-300 hover:bg-neutral-50/70 dark:hover:border-neutral-700 dark:hover:bg-neutral-900/40",
                 it.href
                   ? "cursor-pointer focus:outline-none focus-visible:ring-2 focus-visible:ring-emerald-400/70"
                   : "",
@@ -176,6 +196,7 @@ export default function Timeline({
     </ul>
   );
 }
+
 
 
 
