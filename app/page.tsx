@@ -26,14 +26,31 @@ export default function HomePage() {
   const activeId = active ?? sections[0].id; // <-- remove non-null assertion
 
   const onNavClick = (id: string) => {
-    const root = scrollRef.current;
-    const el = root?.querySelector<HTMLElement>(`#${id}`);
-    if (!root || !el) return;
+  const root = scrollRef.current;
+  const el = (root ?? document).querySelector<HTMLElement>(`#${id}`);
+  if (!el) return;
+
+  // If we're on desktop (lg+) and the scrollport exists, scroll it.
+  const isLg = typeof window !== "undefined" && window.matchMedia("(min-width: 1024px)").matches;
+
+  if (isLg && root) {
+    // Let CSS scroll-margin-top handle the visual offset
+    el.scrollIntoView({ behavior: "smooth", block: "start", inline: "nearest" });
+
+    // Ensure the scroll happens in the custom container, not the window
+    // (Using the manual math to be explicit for container scrolling)
     const rootTop = root.getBoundingClientRect().top;
     const elTop = el.getBoundingClientRect().top;
-    const target = root.scrollTop + (elTop - rootTop) - 16;
+    const target = root.scrollTop + (elTop - rootTop);
     root.scrollTo({ top: Math.max(0, Math.round(target)), behavior: "smooth" });
-  };
+  } else {
+    // Mobile: scroll the page/body
+    el.scrollIntoView({ behavior: "smooth", block: "start", inline: "nearest" });
+  }
+
+  // optional: remove focus ring on mobile after tap
+  (document.activeElement as HTMLElement | null)?.blur?.();
+  };  
 
   const featured = projects.filter((p) => p.featured);
 
