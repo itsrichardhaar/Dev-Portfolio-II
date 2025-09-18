@@ -160,11 +160,21 @@ export const projects: Project[] = [
     title: "Essential Personnel", 
     year: 2024, 
     summary:
-      "Collaborated in the site design of Essential Personnell using Webflow CMS.",
+      "Full site redesign and CMS platform development using Webflow and integrating JavaScript animation libraries. Essential Personnell is a SaaS, performance development and safety/wellness, platform designed for the public sector. The platform and website were built with fire, law enforcement, EMS and the municipal government workforces in mind.",
     madeAt: "Springer Studios", 
     builtWith: ["Webflow", "jQuery", "SwiperJS"], 
     link: "https://www.essper.com", 
-    featured: false 
+    featured: true,
+    description: [
+    "Led a ground-up redesign focused on performance, accessibility, and maintainability.",
+    "Built a modular component and template system."
+  ],
+  highlights: [
+    "95+ Core Web Vitals across pages",
+    "Edge-rendered pages with fast TTFB",
+    "Accessible components with testing"
+  ],
+  images: [{ src: "/images/essper.png", alt: "Essential Personnel Homepage" }]
   },
   { 
     slug: "springer-studios-redesign", 
@@ -241,7 +251,7 @@ export const projects: Project[] = [
     madeAt: "Springer Studios",
     builtWith: ["WordPress", "PHP", "JavaScript"],
     link: "https://www.studsvik.com",
-    featured: true,
+    featured: false,
     description: [
     "Led a ground-up redesign focused on performance, accessibility, and maintainability.",
     "Built a modular component and template system."

@@ -68,12 +68,10 @@ export default function HomePage() {
           {/* About */}
           <Section id="about" title="About">
             <p>
-              I’m an experienced full-stack developer and marketing specialist with 6+ years of experience 
-              programming scalable web-applications and driving measurable results through SEO, 
-              analytics, and cross-functional collaboration. Skilled in modern JavaScript frameworks, 
-              CMS platforms, and cloud hosting environments. Proven ability to translate complex technical and 
-              marketing data into actionable business growth strategies. Adept at leading projects from concept to 
-              deployment in client-facing environments.
+              I’m a full-stack developer and marketing specialist with 6+ years of experience building scalable web applications and websites.
+               Skilled in modern JavaScript frameworks such as React and Nextjs, CMS platforms such as WordPress, Contentful and Storyblok, and cloud hosting environments such as AWS. 
+              I have a proven ability to translate technical and marketing data into actionable business growth strategies. 
+              I’m adept at leading development teams and managing projects from concept to deployment in client-facing environments.
 
             </p>
             <p className="mt-4">
@@ -111,9 +109,9 @@ export default function HomePage() {
             org: "Springer Studios",
             time: "2025 — Present",
             bullets: [
-              "Led development team, year to date, in the build and deployment of 20 websites and applications.",
+              "Led the development team, year to date, in the deployment of 20 websites and applications.",
               "Introduced a modern, headless CMS application stack into our client offerings.",
-              "Build, style, and ship high-quality websites, mobile apps, and design systems.",
+              "Build, style, and ship high-quality websites, web-apps, ui components and design systems.",
               "Spearhead company-wide accessibility initiatives such as creating documentation for best practices, establishing a standard accessibility checklist for developers, and facilitating knowledge shares to clients. ",
             ],
             href: "https://springerstudios.com", 
@@ -125,7 +123,7 @@ export default function HomePage() {
             time: "2022 — 2025",
             bullets: [
               "Build, style, and ship high-quality websites, mobile apps, and design systems.",
-              "Shipped wholesale ecommerce dashboard with daily order updates to multiple storefronts.",
+              "Shipped wholesale ecommerce dashboard with dynamic customer order inputs for assigned products and daily order updates to POS systems at multiple storefronts.",
             ],
             href: "https://springerstudios.com", 
             external: true,  
