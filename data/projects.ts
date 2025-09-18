@@ -20,7 +20,7 @@ export const projects: Project[] = [
     slug: "three-d-model-configurator",
     title: "BuiltRite Model Configurator",
     year: 2025,
-    summary: "Configure your own storage unit model.",
+    summary: "Built in React / TypeScript, this application leverages three.js to render a 3D storage facility model. The application allows users to customzie their own digital building and dynamically select from different textures that are mapped to different mesh layers.",
     madeAt: "Springer Studios",
     builtWith: ["React", "Three.js", "TypeScript", "JavaScript"],
     link: "https://built-rite-model-configurator-59t1.vercel.app",
@@ -73,7 +73,7 @@ export const projects: Project[] = [
     title: "CVCC Programs of Study Filter",
     year: 2025,
     summary:
-      "UI system built to help CVCC students find specific programs of study.",
+      "UI component system built with PHP, JavaScript and ACF fields. The goal of this system was to help Catawba Valley Community College students find information on programs of study in as few clicks as possible. The secondary goal was to drive enrollment conversions for the college by refining the process to locate specific programs. We achieved these goals by building a UI system that included a predective search field, as well as checkboxes to filter by school, area of interest, program type and mode of study. These search and filter controls work together to quickly refine the list of program results displayed below.",
     madeAt: "Springer Studios",
     builtWith: ["PHP", "JavaScript", "mySQL"],
     link: "https://cvcc.edu/programs-of-study/",
