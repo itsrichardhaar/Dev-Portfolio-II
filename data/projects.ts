@@ -118,7 +118,7 @@ export const projects: Project[] = [
     summary:
       "Built and deployed a full site redesign for Vance Granville Community College.",
     madeAt: "Springer Studios", 
-    builtWith: ["WordPress", "PHP"], 
+    builtWith: ["WordPress", "PHP", "JavaScript"], 
     link: "https://www.vgcc.edu", 
     featured: false 
   },
@@ -129,7 +129,7 @@ export const projects: Project[] = [
     summary:
       "Version two of my dev portfolio site.",
     madeAt: "", 
-    builtWith: ["React", "Styled Components"], 
+    builtWith: ["React", "JavaScript", "Styled Components"], 
     link: "https://www.richardhaar.com/", 
     featured: false 
   },
@@ -181,7 +181,7 @@ export const projects: Project[] = [
     title: "Springer Studios Redesign", 
     year: 2024, 
     summary:
-      "Collaborated in the site design and development of the Springer Studios redesign using Webflow CMS.",
+      "Collaborated on the site design and development of the new Springer Studios webiste. We pivoted from using WordPress CMS to using Webflow CMS.",
     madeAt: "Springer Studios", 
     builtWith: ["Webflow", "jQuery", "GSAP", "SwiperJS"], 
     link: "https://www.springerstudios.com", 
@@ -205,7 +205,7 @@ export const projects: Project[] = [
     summary:
       "Built and deployed a full redesign of the Cameron Art Museum site.",
     madeAt: "Springer Studios", 
-    builtWith: ["WordPress", "PHP"], 
+    builtWith: ["WordPress", "PHP", "JavaScript"], 
     link: "https://cameronartmuseum.org", 
     featured: false 
   },
@@ -216,7 +216,7 @@ export const projects: Project[] = [
     summary:
       "Built and deployed a new site for Iredell Ready. Iredell Ready was established in 2022 in partnership with industry, academia, government, and the nonprofit community to identify, align, and enhance strategic priorities across the workforce development pipeline from early childhood education to retirement.",
     madeAt: "Springer Studios", 
-    builtWith: ["WordPress", "PHP", "SwiperJS"], 
+    builtWith: ["WordPress", "PHP", "JavaScript", "SwiperJS"], 
     link: "https://iredellready.com", 
     featured: false 
   },
@@ -227,7 +227,7 @@ export const projects: Project[] = [
     summary:
       "Built and deployed a full redesign for Honeycutt Construction Services.",
     madeAt: "Springer Studios", 
-    builtWith: ["WordPress", "PHP"], 
+    builtWith: ["WordPress", "PHP", "JavaScript"], 
     link: "https://honeycuttcorp.com", 
     featured: false 
   },
@@ -236,7 +236,7 @@ export const projects: Project[] = [
     title: "Southeastern Community College", 
     year: 2023, 
     summary:
-      "Built and deployed a full redesign for Southeastern Community College.",
+      "Built and deployed a full wesbite redesign for Southeastern Community College.",
     madeAt: "Springer Studios", 
     builtWith: ["WordPress", "PHP", "JavaScript"], 
     link: "https://www.sccnc.edu", 
@@ -270,7 +270,7 @@ export const projects: Project[] = [
     summary:
       "Built and deployed a full redesign for Durham Charter School.",
     madeAt: "Springer Studios", 
-    builtWith: ["WordPress", "PHP"], 
+    builtWith: ["WordPress", "PHP", "JavaScript"], 
     link: "https://www.durhamcharter.org", 
     featured: false 
   },
@@ -293,7 +293,7 @@ export const projects: Project[] = [
     "Built and deployed a full redesign for James Sprunt Community College.",
   madeAt: "Springer Studios",
   builtWith: ["WordPress", "PHP", "JavaScript", "mySQL"],
-  link: "https://jamessprunt.edu", // update to the real URL if different
+  link: "https://jamessprunt.edu", 
   featured: false,
 },
   { 
