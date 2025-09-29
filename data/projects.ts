@@ -73,7 +73,7 @@ export const projects: Project[] = [
     title: "CVCC Programs of Study Filter",
     year: 2025,
     summary:
-      "UI component system built with PHP, JavaScript and ACF fields. The goal of this system was to help Catawba Valley Community College students find information on programs of study in as few clicks as possible. The secondary goal was to drive enrollment conversions for the college by refining the process to locate specific programs. We achieved these goals by building a UI system that included a predective search field, as well as checkboxes to filter by school, area of interest, program type and mode of study. These search and filter controls work together to quickly refine the list of program results displayed below.",
+      "A UI component system built with PHP, JavaScript and ACF fields. The goal of this system was to help Catawba Valley Community College students find specific programs of study in as few clicks as possible. The secondary goal was to drive enrollment conversions by simplifying the process for locating programs offerings. We achieved these goals by building a UI system that included a predective search field and checkbox filters for school, area of interest, program type and mode of study. Our UI components have simplified the program search process for students and increased course enrollments by 109% this past semester.",
     madeAt: "Springer Studios",
     builtWith: ["PHP", "JavaScript", "mySQL"],
     link: "https://cvcc.edu/programs-of-study/",
