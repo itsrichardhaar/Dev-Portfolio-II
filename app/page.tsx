@@ -110,7 +110,7 @@ export default function HomePage() {
             time: "2025 — Present",
             bullets: [
               "Led the development team, year to date, in the deployment of 20 websites and applications.",
-              "Collaborate with product and project managers, designers, and other developers to transform creative concepts into refined digital experiences at an agile (2 week) cadence.",
+              "Collaborate with product managers, designers, and other developers to transform concepts into production digital experiences at an agile (2-week) cadence.",
               "Introduced a modern, headless CMS application stack into our client offerings.",
               "Build, style, and ship high-quality websites, web-apps, ui components and design systems.",
               "Spearhead company-wide accessibility initiatives such as creating documentation for best practices, establishing a standard accessibility checklist for developers, and facilitating knowledge shares to clients. ",
@@ -131,7 +131,7 @@ export default function HomePage() {
             external: true,  
           },
           {
-            role: "Developer & Digital Marketing Specialist",
+            role: "Web Developer & Digital Marketing Specialist",
             org: "HighClick Media",
             time: "2019 — 2022",
             bullets: [
