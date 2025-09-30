@@ -110,6 +110,7 @@ export default function HomePage() {
             time: "2025 — Present",
             bullets: [
               "Led the development team, year to date, in the deployment of 20 websites and applications.",
+              "Collaborate with product and project managers, designers, and other developers to transform creative concepts into refined digital experiences at an agile (2 week) cadence.",
               "Introduced a modern, headless CMS application stack into our client offerings.",
               "Build, style, and ship high-quality websites, web-apps, ui components and design systems.",
               "Spearhead company-wide accessibility initiatives such as creating documentation for best practices, establishing a standard accessibility checklist for developers, and facilitating knowledge shares to clients. ",
@@ -123,6 +124,7 @@ export default function HomePage() {
             time: "2022 — 2025",
             bullets: [
               "Build, style, and ship high-quality websites, mobile apps, and design systems.",
+              "Led the development and architecture of technical tools like content management systems, REST APIs, plugins, UI components and CI/CD pipelines to fulfill business and stakeholder requirements.",
               "Shipped wholesale ecommerce dashboard with dynamic customer order inputs for assigned products and daily order updates to POS systems at multiple storefronts.",
             ],
             href: "https://springerstudios.com", 
@@ -133,8 +135,10 @@ export default function HomePage() {
             org: "HighClick Media",
             time: "2019 — 2022",
             bullets: [
-              "Introduced design system and a11y audits.",
-              "Shipped analytics dashboard with realtime data.",
+              "Developed, maintained and shipped production code for client websites primarily using WordPress CMS, HTML, CSS, PHP, and JavaScript.",
+              "Conducted competitive keyword research, technical SEO audits and internal linking strategies to increase organic search rankings for internal brand websites.",
+              "Managed multi-channel digital ad campaigns for internal brands and clients, leveraged Google Ads and SEMRush to optimize ad spend and maximize ROI.",
+              "Leveraged targeted ad campaigns, A/B testing, and custom developed landing pages to increase lead generation and conversions on internal websites.",
             ],
             href: "https://dtinetworks.com", 
             external: true,  
