@@ -170,6 +170,7 @@ export default function Timeline({
                 // desktop: original paddings
                 "lg:pl-4 lg:pr-4 lg:py-4",
                 "transition-all duration-200",
+                // 🔽 this is the part that now matches ProjectCard
                 isActive
                   ? "bg-[rgba(45,212,191,0.1)]"
                   : "hover:bg-[rgba(45,212,191,0.1)]",
@@ -183,7 +184,7 @@ export default function Timeline({
                 <div className="text-sm text-neutral-500">{it.org}</div>
               </div>
               {it.bullets?.length ? (
-                <ul className="mt-2 list-disc pl-5 text-sm text-copy/80">
+                <ul className="mt-2 list-disc pl-5 text-sm text-neutral-700 dark:text-neutral-300">
                   {it.bullets.map((b, i) => (
                     <li key={i}>{b}</li>
                   ))}
