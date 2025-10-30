@@ -1,4 +1,6 @@
 // components/ProjectCard.tsx
+"use client";
+
 import Link from "next/link";
 import Image from "next/image";
 import { memo } from "react";
@@ -44,23 +46,24 @@ function ProjectCardImpl({ project }: { project: Project }) {
       <article
         className={[
           // layout & spacing
-          "group rounded-xl border border-border/80 pr-5 pl-0 pt-5 pb-5 first:border-0",
+          "group rounded-xl border border-border/80 px-5 pt-5 pb-5 first:border-0",
           // compositing & paint-friendly hover
           "transition-colors duration-200",
           "hover:bg-[rgba(45,212,191,0.1)]",
           "hover:border-neutral-300 dark:hover:border-neutral-700",
         ].join(" ")}
       >
-        <div className="flex items-start gap-4">
-          {/* Thumbnail (own layer, no layout shift) */}
+        {/* 👇 stack on mobile, row on sm+ */}
+        <div className="flex flex-col gap-4 sm:flex-row sm:items-start">
+          {/* Thumbnail */}
           <div
             className={[
-              "relative shrink-0 overflow-hidden rounded-lg border border-border/60",
-              // fixed box prevents CLS
-              "h-20 w-28 sm:h-28 sm:w-36",
-              // promote to separate layer so parent repaints don’t flash the image
+              "relative overflow-hidden rounded-lg border border-border/60",
+              // fixed boxes
+              "h-40 w-full sm:h-24 sm:w-32 md:h-28 md:w-36",
+              "shrink-0",
+              // promote
               "transform-gpu will-change-transform [backface-visibility:hidden]",
-              // ensure smoother scaling on some GPUs
               "[transform:translateZ(0)]",
             ].join(" ")}
           >
@@ -70,10 +73,8 @@ function ProjectCardImpl({ project }: { project: Project }) {
                 alt={thumb.alt ?? project.title}
                 fill
                 sizes="(min-width: 1024px) 12rem, 9rem"
-                // user-perceived stability
                 priority={false}
-                placeholder="empty" // switch to 'blur' if you add blurDataURL
-                // performance hints
+                placeholder="empty"
                 decoding="async"
                 className="object-cover select-none"
                 draggable={false}
@@ -85,25 +86,25 @@ function ProjectCardImpl({ project }: { project: Project }) {
 
           {/* Text side */}
           <div className="min-w-0 flex-1">
-            <header className="flex flex-col sm:flex-row sm:items-baseline sm:justify-between">
+            <header className="flex flex-col sm:flex-row sm:items-baseline sm:justify-between gap-1">
               <h3 className="truncate text-[1.05rem] font-semibold tracking-tight text-copy">
                 {project.title}
               </h3>
               {project.year ? (
-                <span className="mt-1 text-sm text-copy/80 sm:mt-0">
+                <span className="text-sm text-copy/80 sm:mt-0">
                   {project.year}
                 </span>
               ) : null}
             </header>
 
             {project.summary && (
-              <p className="mt-1.5 mr-10 text-[0.95rem] leading-6">
+              <p className="mt-1.5 md:mr-10 text-[0.95rem] leading-6">
                 {project.summary}
               </p>
             )}
 
             {project.builtWith?.length ? (
-              <ul className="mt-2 flex flex-wrap gap-2">
+              <ul className="mt-3 flex flex-wrap gap-2">
                 {project.builtWith.map((t) => (
                   <li
                     key={t}
@@ -122,6 +123,7 @@ function ProjectCardImpl({ project }: { project: Project }) {
 }
 
 export default memo(ProjectCardImpl);
+
 
 
 

@@ -184,7 +184,7 @@ export const projects: Project[] = [
     madeAt: "Springer Studios", 
     builtWith: ["Webflow", "jQuery", "SwiperJS"], 
     link: "https://www.essper.com", 
-    featured: true,
+    featured: false,
     description: [
     "Led a ground-up redesign focused on performance, accessibility, and maintainability.",
     "Built a modular component and template system."

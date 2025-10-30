@@ -171,8 +171,8 @@ export default function Timeline({
                 "lg:pl-4 lg:pr-4 lg:py-4",
                 "transition-all duration-200",
                 isActive
-                  ? "border-neutral-300 bg-neutral-50/70 dark:border-neutral-700 dark:bg-neutral-900/40"
-                  : "hover:border-neutral-300 hover:bg-neutral-50/70 dark:hover:border-neutral-700 dark:hover:bg-neutral-900/40",
+                  ? "bg-[rgba(45,212,191,0.1)]"
+                  : "hover:bg-[rgba(45,212,191,0.1)]",
                 it.href
                   ? "cursor-pointer focus:outline-none focus-visible:ring-2 focus-visible:ring-emerald-400/70"
                   : "",
@@ -183,7 +183,7 @@ export default function Timeline({
                 <div className="text-sm text-neutral-500">{it.org}</div>
               </div>
               {it.bullets?.length ? (
-                <ul className="mt-2 list-disc pl-5 text-sm text-neutral-700 dark:text-neutral-300">
+                <ul className="mt-2 list-disc pl-5 text-sm text-copy/80">
                   {it.bullets.map((b, i) => (
                     <li key={i}>{b}</li>
                   ))}
@@ -196,6 +196,7 @@ export default function Timeline({
     </ul>
   );
 }
+
 
 
 
