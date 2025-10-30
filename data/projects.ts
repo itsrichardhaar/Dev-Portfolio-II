@@ -17,10 +17,30 @@ export type Project = {
 
 export const projects: Project[] = [
   {
+    slug: "atmosled",
+    title: "Atmos LED Website",
+    year: 2025,
+    summary: "Built with React + TypeScript for Atmos LED.",
+    madeAt: "Springer Studios",
+    builtWith: ["React", "TypeScript", "JavaScript", "Shopify", "Framer"],
+    link: "https://atmosled.co/",
+    featured: true,
+    description: [
+    "Led the development of this brand website.",
+    "Built a reusable component and template system."
+  ],
+  highlights: [
+    "95+ Core Web Vitals across pages",
+    "Edge-rendered pages with fast TTFB",
+    "Accessible components with testing"
+  ],
+  images: [{ src: "/images/atmosled.png", alt: "Atmos LED" }]
+  },
+  {
     slug: "three-d-model-configurator",
     title: "BuiltRite Model Configurator",
     year: 2025,
-    summary: "Built in React / TypeScript, this application leverages three.js to render a 3D storage facility model. The application allows users to customzie their own digital building and dynamically select from different textures that are mapped to different mesh layers.",
+    summary: "Built with React + TypeScript, this application leverages three.js to render a 3D storage facility model. The application allows users to customzie their own digital building and dynamically select from different textures that are mapped to different mesh layers.",
     madeAt: "Springer Studios",
     builtWith: ["React", "Three.js", "TypeScript", "JavaScript"],
     link: "https://built-rite-model-configurator-59t1.vercel.app",
@@ -160,7 +180,7 @@ export const projects: Project[] = [
     title: "Essential Personnel", 
     year: 2024, 
     summary:
-      "Full site redesign and CMS platform development using Webflow and integrating JavaScript animation libraries. Essential Personnell is a SaaS, performance development and safety/wellness, platform designed for the public sector. The platform and website were built with fire, law enforcement, EMS and the municipal government workforces in mind.",
+      "Full site redesign and CMS platform development using Webflow and integrating JavaScript animation libraries. Essential Personnel is a SaaS, performance development and safety/wellness, platform designed for the public sector. The platform and website were built with fire, law enforcement, EMS and the municipal government workforces in mind.",
     madeAt: "Springer Studios", 
     builtWith: ["Webflow", "jQuery", "SwiperJS"], 
     link: "https://www.essper.com", 
