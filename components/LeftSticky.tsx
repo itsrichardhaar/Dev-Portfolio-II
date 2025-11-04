@@ -116,7 +116,7 @@ export default function LeftSticky({
         <ul className="flex flex-wrap gap-x-3 gap-y-2 text-sm lg:text-base text-neutral-500">
           <li>
             <a
-              href="#"
+              href="https://github.com/itsrichardhaar"
               className="hover:text-neutral-900 dark:hover:text-white"
               aria-label="GitHub"
             >
@@ -127,7 +127,7 @@ export default function LeftSticky({
           </li>
           <li>
             <a
-              href="#"
+              href="https://www.linkedin.com/in/richard-haar-a81916155/"
               className="hover:text-neutral-900 dark:hover:text-white"
               aria-label="LinkedIn"
             >
