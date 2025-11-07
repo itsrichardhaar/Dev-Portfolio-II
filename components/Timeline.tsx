@@ -98,7 +98,6 @@ export default function Timeline({
             key={`${it.role}-${it.time}-${idx}`}
             className="relative lg:grid lg:grid-cols-[auto_1fr] lg:gap-x-3"
           >
-            {/* MOBILE rail segment & dot (absolute) */}
             {!isLast && (
               <span
                 aria-hidden="true"
@@ -115,7 +114,6 @@ export default function Timeline({
               ].join(" ")}
             />
 
-            {/* DESKTOP left column: rail + dot + time */}
             <div className={`relative ${leftWidthClass} hidden pb-5 lg:block`}>
               {!isLast && (
                 <span
@@ -137,12 +135,10 @@ export default function Timeline({
               </div>
             </div>
 
-            {/* MOBILE: date above card, aligned to rail, card full-width with left gutter */}
             <div className="pl-10 lg:hidden">
               <div className="pt-2 text-xs text-neutral-500">{it.time}</div>
             </div>
 
-            {/* Card (mobile: pl-10 to clear rail; desktop: grid col 2) */}
             <RowWrapper
               href={it.href}
               external={it.external}
@@ -165,12 +161,10 @@ export default function Timeline({
               className={[
                 "mt-1 lg:mt-0",
                 "block w-full rounded-lg border border-transparent",
-                // mobile: tuck near rail, full-width feel
                 "pl-10 pr-3 py-3.5",
-                // desktop: original paddings
                 "lg:pl-4 lg:pr-4 lg:py-4",
                 "transition-all duration-200",
-                // 🔽 this is the part that now matches ProjectCard
+               
                 isActive
                   ? "bg-[rgba(45,212,191,0.1)]"
                   : "hover:bg-[rgba(45,212,191,0.1)]",

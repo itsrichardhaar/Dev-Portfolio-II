@@ -12,7 +12,6 @@ type Props = {
   className?: string;
 };
 
-// define the easing as a tuple so TS knows it's valid
 const EASE: Transition["ease"] = [0.22, 1, 0.36, 1];
 
 const sectionVariants: Variants = {

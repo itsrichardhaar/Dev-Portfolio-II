@@ -2,7 +2,7 @@
 "use client";
 
 import { useMemo, useRef, useState } from "react";
-import { motion } from "framer-motion"; // 👈 add this
+import { motion } from "framer-motion";
 import LeftSticky from "../components/LeftSticky";
 import Section from "../components/Section";
 import Timeline from "../components/Timeline";
@@ -61,9 +61,7 @@ export default function HomePage() {
         className="scrollport relative z-10 lg:col-span-7 lg:h-screen lg:min-h-0 lg:overflow-y-auto lg:pt-6 lg:pb-16 lg:pr-6 [scrollbar-gutter:stable]"
       >
         <div className="py-10 lg:py-0">
-          {/* About */}
           <Section id="about" title="About">
-            {/* parent controls the stagger */}
             <motion.div
               initial="hidden"
               whileInView="show"
@@ -137,8 +135,6 @@ export default function HomePage() {
               </motion.p>
             </motion.div>
           </Section>
-
-          {/* Experience */}
           <Section
             id="experience"
             title="Experience"
@@ -151,24 +147,15 @@ export default function HomePage() {
               onItemHover={setExpHover}
               items={[
                 {
-                  role: "Senior Web Developer",
+                  role: "Full-Stack Engineer",
                   org: "Springer Studios",
-                  time: "2025 — Present",
+                  time: "2022 — Present",
                   bullets: [
                     "Collaborate with product managers, designers, and other developers to transform concepts into production digital experiences at an agile (2-week) cadence.",
                     "Introduced a modern, headless CMS application stack into our client offerings.",
                     "Introduced modern build pipelines using Vite and Github actions into our dev team workflows.",
                     "Build, style, and ship high-quality websites, web-apps and ui component systems.",
                     "Spearhead company-wide WCAG accessibility initiatives such as creating documentation for best practices, establishing a standard accessibility checklist for developers, and facilitating knowledge shares with our clients. ",
-                  ],
-                  href: "https://springerstudios.com",
-                  external: true,
-                },
-                {
-                  role: "Web Developer",
-                  org: "Springer Studios",
-                  time: "2022 — 2025",
-                  bullets: [
                     "Build, style, and ship high-quality websites, mobile apps, and design systems.",
                     "Led the development and architecture of technical tools like content management systems, REST APIs, plugins, UI components and CI/CD pipelines to fulfill business and stakeholder requirements.",
                     "Shipped wholesale ecommerce dashboard with dynamic customer order inputs for assigned products and daily order updates to POS systems at multiple storefronts.",
@@ -177,7 +164,7 @@ export default function HomePage() {
                   external: true,
                 },
                 {
-                  role: "Web Developer & Digital Marketing Specialist",
+                  role: "Web Developer",
                   org: "HighClick Media",
                   time: "2019 — 2022",
                   bullets: [
@@ -194,15 +181,15 @@ export default function HomePage() {
 
             <div className="mt-8">
               <Link
-                href="/"
+                href="/resume.pdf"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="link-underline text-sm font-medium text-copy no-underline"
               >
                 View full resume →
               </Link>
             </div>
           </Section>
-
-          {/* Projects */}
           <Section
             id="projects"
             title="Featured Projects"

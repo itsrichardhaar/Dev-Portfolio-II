@@ -5,7 +5,6 @@ import { motion, type Variants, type Transition } from "framer-motion";
 
 type SectionLink = { id: string; label: string };
 
-// define easing once so TS is happy
 const EASE: Transition["ease"] = [0.22, 1, 0.36, 1];
 
 const containerVariants: Variants = {
@@ -69,11 +68,9 @@ export default function LeftSticky({
           Richard Haar
         </h1>
         <p className="mt-2 lg:mt-3 max-w-md text-base sm:text-lg font-semibold text-neutral-600 dark:text-neutral-400">
-          Senior Web Developer.
+          Full-Stack Engineer.
         </p>
       </motion.div>
-
-      {/* Scrollspy nav — visible on mobile, same styling on desktop */}
       <nav className="hidden lg:block lg:mt-[3.75rem]">
         <motion.ul className="space-y-1 lg:space-y-2">
           {sections.map((s) => (
