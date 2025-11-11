@@ -89,7 +89,7 @@ export default function HomePage() {
                 I’m a full-stack engineer with 7+ years of experience
                 building scalable web applications, websites and mobile apps. Skilled in modern JavaScript
                 frameworks such as React and Nextjs, CMS platforms such as WordPress, Contentful and
-                Storyblok, and cloud hosting environments such as AWS. I have a proven ability to
+                Storybook, and cloud hosting environments such as AWS. I have a proven ability to
                 translate technical and marketing data into actionable business growth strategies.
                 I’m adept at leading development teams and managing projects from concept to
                 deployment in client-facing environments.

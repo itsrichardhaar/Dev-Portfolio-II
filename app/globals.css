@@ -43,27 +43,16 @@
 }
 
 
-
 /* --- Type rhythm & link styling --- */
 :root {
   --radius: 12px;
 }
 
+
+
 .prose {
   line-height: 1.7;
   letter-spacing: 0.005em;
-}
-/*
-.prose :where(a):not(:where(.not-prose *)) {
-  text-decoration: underline;
-  text-underline-offset: 3px;
-  text-decoration-thickness: 1px;
-}
-.prose :where(code):not(:where(.not-prose *)) {
-  font-size: 0.95em;
-  padding: 0.1em 0.35em;
-  border-radius: 6px;
-  background: color-mix(in oklab, currentColor 8%, transparent);
 }
 
 /* --- Focus ring (keyboard) --- */
