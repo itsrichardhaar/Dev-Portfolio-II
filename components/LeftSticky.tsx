@@ -39,7 +39,7 @@ const socialsVariants: Variants = {
   show: {
     opacity: 1,
     y: 0,
-    transition: { duration: 0.25, ease: EASE, delay: 0.1 },
+    transition: { duration: 0.55, ease: EASE, delay: 0.1 },
   },
 };
 
@@ -90,7 +90,7 @@ export default function LeftSticky({
                 <motion.span
                   aria-hidden
                   layout
-                  transition={{ type: "spring", stiffness: 380, damping: 32 }}
+                  transition={{ type: "spring", stiffness: 220, damping: 28 }}
                   className={[
                     "h-px shrink-0",
                     active === s.id
