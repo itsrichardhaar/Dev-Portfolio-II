@@ -164,7 +164,7 @@ export default function HomePage() {
                 },
                 {
                   role: "Web Developer",
-                  org: "HighClick Media",
+                  org: "Datagroup Technologies",
                   time: "2019 — 2022",
                   bullets: [
                     "Developed, maintained and shipped production code for client websites primarily using WordPress CMS, HTML, CSS, PHP, and JavaScript.",
