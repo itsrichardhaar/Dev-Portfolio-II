@@ -87,12 +87,11 @@ export default function HomePage() {
                 }}
               >
                 I’m a full-stack engineer with 7+ years of experience
-                building scalable web applications, websites and mobile apps. Skilled in modern JavaScript
-                frameworks such as React and Nextjs, CMS platforms such as WordPress, Contentful and
-                Storybook, and cloud hosting environments such as AWS. I have a proven ability to
-                translate technical and marketing data into actionable business growth strategies.
-                I’m adept at leading development teams and managing projects from concept to
-                deployment in client-facing environments.
+                building high-performance, scalable web applications, websites and mobile experiences. I specialize in modern JavaScript econsystems
+                such as React, NextJS, VueJS and NodeJS, as well as, headless CMS platforms like WordPress and Contentful. 
+                I combine engineering depth with a marketer’s instinct, turning data and insights into solutions that drive real business impact. 
+                I thrive on solving complex problems, architecting scalable systems, and bringing new ideas to life. 
+                I’m known for leading development teams, shipping clean and maintainable code, and managing projects end-to-end in fast-paced, client facing environments.
               </motion.p>
 
               <motion.p
@@ -106,7 +105,7 @@ export default function HomePage() {
                 }}
                 className="mt-0"
               >
-                My primary focus is managing the development team at{" "}
+                My primary focus is leading the development team at{" "}
                 <a
                   href="https://springerstudios.com"
                   target="_blank"
@@ -130,8 +129,8 @@ export default function HomePage() {
                 }}
                 className="mt-0"
               >
-                In my spare time, I’m usually skiing in the rockies, or hanging somewhere in OBX.
-                My home base is split between Wilmington and Raleigh, NC.
+                In my spare time, I enjoy traveling to new places, skiing in the rockies, or hanging somewhere on the NC coast.
+                My home base is currently Raleigh, NC.
               </motion.p>
             </motion.div>
           </Section>
