@@ -105,7 +105,7 @@ export default function HomePage() {
                 }}
                 className="mt-0"
               >
-                My primary focus is leading the development team at{" "}
+                My primary focus is leading the engineering team at{" "}
                 <a
                   href="https://springerstudios.com"
                   target="_blank"
@@ -129,7 +129,7 @@ export default function HomePage() {
                 }}
                 className="mt-0"
               >
-                In my spare time, I enjoy traveling to new places, skiing in the rockies, or hanging somewhere on the NC coast.
+                In my spare time, I enjoy traveling, skiing in the rockies, or hanging somewhere on the NC coast.
                 My home base is currently Raleigh, NC.
               </motion.p>
             </motion.div>
