@@ -87,7 +87,7 @@ export default function HomePage() {
                 }}
               >
                 I’m a full-stack engineer with 7+ years of experience
-                building high-performance, scalable web applications, websites and mobile experiences. I specialize in modern JavaScript econsystems
+                building high-performance, scalable web applications, websites and mobile experiences. I specialize in modern JavaScript ecosystems
                 such as React, NextJS, VueJS and NodeJS, as well as, headless CMS platforms like WordPress and Contentful. 
                 I combine engineering depth with a marketer’s instinct, turning data and insights into solutions that drive real business impact. 
                 I thrive on solving complex problems, architecting scalable systems, and bringing new ideas to life. 
