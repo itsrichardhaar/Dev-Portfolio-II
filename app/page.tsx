@@ -205,7 +205,7 @@ export default function HomePage() {
           <Section
             id="projects"
             title="Featured Projects"
-            subtitle="A few favorites—see the archive for more."
+            subtitle="A few recent favorites - see the full archive for more."
           >
             <div className="not-prose">
               {featured.map((proj) => (
