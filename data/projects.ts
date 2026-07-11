@@ -89,14 +89,14 @@ export const projects: Project[] = [
     featured: false 
   },
   {
-    slug: "program-filter",
-    title: "Programs of Study Filter Plugin",
-    year: 2025,
+    slug: "mesh",
+    title: "Mesh",
+    year: 2026,
     summary:
-      "A UI component system and plugin built with PHP, JavaScript and ACF fields. The goal of this system was to help North Carolina Community College students find information on specific programs of study in as few clicks as possible. The secondary goal was to drive enrollment conversions for community colleges by simplifying the process.",
+      "Desktop app that gives Claude Code users visibility over their scattered AI coding projects and sessions: auto-discovers every project, renders session transcripts, resumes sessions in live embedded terminals, and generates LLM-powered activity analyses.",
     madeAt: "Springer Studios",
-    builtWith: ["PHP", "JavaScript", "mySQL"],
-    link: "https://cvcc.edu/programs-of-study/",
+    builtWith: ["TypeScript", "React", "SQLite", "Electron", "Zustand"],
+    link: "https://github.com/itsrichardhaar/Mesh",
     featured: true, 
     description: [
     "Led a ground-up redesign focused on performance, accessibility, and maintainability.",

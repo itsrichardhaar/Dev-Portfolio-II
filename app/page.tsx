@@ -86,12 +86,26 @@ export default function HomePage() {
                   },
                 }}
               >
-                I’m a full-stack engineer with 7+ years of experience
-                building high-performance, scalable web applications, websites and mobile experiences. I specialize in modern JavaScript ecosystems
-                such as React, NextJS, VueJS and NodeJS, as well as, headless CMS platforms like WordPress and Contentful. 
-                I combine engineering depth with a marketer’s instinct, turning data and insights into solutions that drive real business impact. 
-                I thrive on solving complex problems, architecting scalable systems, and bringing new ideas to life. 
-                I’m known for leading development teams, shipping clean and maintainable code, and managing projects end-to-end in fast-paced, client facing environments.
+                As a full-stack engineer, I thrive working in a team to design, build, and optimize software solutions, web
+                applications, automation workflows, and AI-powered solutions. I enjoy solving complex technical challenges and 
+                finding innovative ways to improve efficiency, streamline operations, and deliver measurable business value.  My 
+                background has equipped me with the skills to create secure, scalable, realiable systems that meet the needs of
+                users while maitaining a high standard of code quality.
+              </motion.p>
+
+              <motion.p
+                variants={{
+                  hidden: { opacity: 0, y: 8 },
+                  show: {
+                    opacity: 1,
+                    y: 0,
+                    transition: { duration: 0.4, ease: [0.22, 1, 0.36, 1] },
+                  },
+                }}
+              >
+                My experience spans the entire development lifecycle from building UI components and backend APIs to integrating 
+                cloud services, databases, and AI technologies into production-ready applications. I value collaborating with teams 
+                and continually learning new technologies to stay at the forefront of software and application engineering.
               </motion.p>
 
               <motion.p
@@ -114,8 +128,7 @@ export default function HomePage() {
                 >
                   Springer Studios
                 </a>{" "}
-                and contributing to the development of accessible, user-centric interfaces and
-                digital experiences for our clients.
+                and contributing to the development of user-centric, intelligent systems.
               </motion.p>
 
               <motion.p
@@ -150,26 +163,25 @@ export default function HomePage() {
                   org: "Springer Studios",
                   time: "2022 — Present",
                   bullets: [
-                    "Collaborate with product managers, designers, and other developers to transform concepts into production digital experiences at an agile (2-week) cadence.",
-                    "Introduced a modern, headless CMS application stack into our client offerings.",
-                    "Introduced modern build pipelines using Vite and Github actions into our dev team workflows.",
+                    "Developed an internal analytics platform using TypeScript, React, Node.js, LLM APIs, Docker and CI/CD piplines to track LLM token usage and improve cost visibility and resources mamangement across engineering team.",
+                    "Built an AI Chatbot using TypeScript, Python, LangGraph and ChromaDB RAG pipelines over internal documents to improve employee onboarding and SOP research.",
+                    "Automated manual, labor-heavy business process with LLM APIs using Claude Code and Open AI Codex, replacing repetitive human steps and reducing turnaround time.",
                     "Build, style, and ship high-quality websites, mobile apps, and design systems.",
-                    "Spearhead company-wide WCAG accessibility initiatives such as creating documentation for best practices, establishing a standard accessibility checklist for developers, and facilitating knowledge shares with our clients. ",
-                    "Led the development and architecture of technical tools like content management systems, REST APIs, plugins, UI components and CI/CD pipelines to fulfill business and stakeholder requirements.",
-                    "Shipped wholesale ecommerce dashboard with dynamic customer order inputs for assigned products and daily order updates to POS systems at multiple storefronts.",
+                    "Served as technical lead for client onboarding, implementations and training, gathered technical requirements from stakeholders and translated them to product managers, designers and other engineers.",
+                    "Engineered an AI workspace desktop application using TypeScript, Python, SQL, HTML, CSS, integrated with Claude Code and Open AI Codex SDKs to organize code projects, agent sessions, manage orchestration, search session history, and resume past sessions in CLI.",
                   ],
                   href: "https://springerstudios.com",
                   external: true,
                 },
                 {
-                  role: "Web Developer",
+                  role: "Web Engineer",
                   org: "Datagroup Technologies",
                   time: "2019 — 2022",
                   bullets: [
-                    "Developed, maintained and shipped production code for client websites primarily using WordPress CMS, HTML, CSS, PHP, and JavaScript.",
-                    "Conducted competitive keyword research, technical SEO audits and internal linking strategies to increase organic search rankings for internal brand websites.",
-                    "Managed multi-channel digital ad campaigns for internal brands and clients, leveraged Google Ads and SEMRush to optimize ad spend and maximize ROI.",
-                    "Leveraged targeted ad campaigns, A/B testing, and custom developed landing pages to increase lead generation and conversions on internal websites.",
+                    "Shipped and maintained production code using JavaScript, HTML, CSS, TypeScript, React, PostgreSQL across client web applications, serving as a senior IC other engineers relied on for technical direction.",
+                    "Diagnosed and resolved issues across AWS intances and client apps, owned QA and cross-browser/accessibility testing, and improved monitoring processes.",
+                    "Collaborated directly with designers and stakeholders to gather requirements and deliver UI updates, feature enhancements, and CMS improvements.",
+                    "Drove front-end architecture decisions across performance, accessibility (WCAG 2.1 AA).",
                   ],
                   href: "https://dtinetworks.com",
                   external: true,
