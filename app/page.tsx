@@ -48,7 +48,9 @@ export default function HomePage() {
     (document.activeElement as HTMLElement | null)?.blur?.();
   };
 
-  const featured = projects.filter((p) => p.featured);
+  const featured = projects
+    .filter((p) => p.featured)
+    .sort((a, b) => (a.featuredOrder ?? Infinity) - (b.featuredOrder ?? Infinity));
 
   return (
     <div className="mx-auto grid lg:h-screen max-w-6xl grid-cols-1 gap-0 px-4 sm:px-6 lg:grid-cols-12 lg:gap-8 lg:overflow-hidden">

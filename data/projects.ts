@@ -8,6 +8,7 @@ export type Project = {
   builtWith?: string[];
   link?: string;          // optional external URL
   featured?: boolean;
+  featuredOrder?: number; // display order for featured projects (lower = first)
 
   // NEW: fields for detail page
   description?: string[]; // paragraphs
@@ -25,6 +26,7 @@ export const projects: Project[] = [
     builtWith: ["React", "TypeScript", "JavaScript", "Shopify", "Framer"],
     link: "https://atmosled.co/",
     featured: true,
+    featuredOrder: 2,
     description: [
     "Led the development of this brand website.",
     "Built a reusable component and template system."
@@ -45,6 +47,7 @@ export const projects: Project[] = [
     builtWith: ["React", "Three.js", "TypeScript", "JavaScript"],
     link: "https://built-rite-model-configurator-59t1.vercel.app",
     featured: true,
+    featuredOrder: 3,
     description: [
     "Led a ground-up redesign focused on performance, accessibility, and maintainability.",
     "Built a modular component and template system."
@@ -95,9 +98,10 @@ export const projects: Project[] = [
     summary:
       "Desktop app that gives Claude Code users visibility over their scattered AI coding projects and sessions: auto-discovers every project, renders session transcripts, resumes sessions in live embedded terminals, and generates LLM-powered activity analyses.",
     madeAt: "Springer Studios",
-    builtWith: ["TypeScript", "React", "SQLite", "Electron", "Zustand"],
+    builtWith: ["React", "TypeScript", "SQLite", "Electron", "Zustand"],
     link: "https://github.com/itsrichardhaar/Mesh",
-    featured: true, 
+    featured: true,
+    featuredOrder: 1,
     description: [
     "Led a ground-up redesign focused on performance, accessibility, and maintainability.",
     "Built a modular component and template system."
@@ -107,7 +111,7 @@ export const projects: Project[] = [
     "Edge-rendered pages with fast TTFB",
     "Accessible components with testing"
   ],
-  images: [{ src: "/images/Programs-Filter.png", alt: "CVCC Programs Filter" }]
+  images: [{ src: "/images/Mesh-workspace.png", alt: "Mesh Desktop App Workspace View" }]
   },
   {
     slug: "design-system",
