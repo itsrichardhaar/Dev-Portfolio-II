@@ -178,7 +178,7 @@ export default function Timeline({
                 <div className="text-sm text-neutral-500">{it.org}</div>
               </div>
               {it.bullets?.length ? (
-                <ul className="mt-2 list-disc pl-5 text-sm text-neutral-700 dark:text-neutral-300">
+                <ul className="mt-2 list-disc space-y-2 pl-5 text-sm text-neutral-700 dark:text-neutral-300">
                   {it.bullets.map((b, i) => (
                     <li key={i}>{b}</li>
                   ))}
