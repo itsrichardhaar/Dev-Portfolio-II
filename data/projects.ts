@@ -65,7 +65,7 @@ export const projects: Project[] = [
     slug: "atmosled",
     title: "Atmos LED Website",
     year: 2025,
-    summary: "A modern React + TypeScript website blending a brand-driven marketing experience with an integrated Shopify e-commerce store. Designed to showcase Atmos LED’s lighting products through immersive visuals, smooth motion, and fast, scalable architecture.",
+    summary: "Developed a brand-driven marketing website with an integrated Shopify e-commerce store, using React + TypeScript. Designed to showcase Atmos LED’s lighting products and drive sales through immersive visuals, smooth motion, and fast, scalable architecture.",
     madeAt: "Springer Studios",
     builtWith: ["React", "TypeScript", "JavaScript", "Shopify", "Framer"],
     link: "https://atmosled.co/",
