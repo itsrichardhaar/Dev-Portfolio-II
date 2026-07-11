@@ -18,6 +18,50 @@ export type Project = {
 
 export const projects: Project[] = [
   {
+    slug: "mesh",
+    title: "Mesh",
+    year: 2026,
+    summary:
+      "Desktop app that gives Claude Code users visibility over their scattered AI coding projects and sessions: auto-discovers every project, renders session transcripts, resumes sessions in live embedded terminals, and generates LLM-powered activity analyses.",
+    madeAt: "Springer Studios",
+    builtWith: ["React", "TypeScript", "SQLite", "Electron", "Zustand"],
+    link: "https://github.com/itsrichardhaar/Mesh",
+    featured: true,
+    featuredOrder: 1,
+    description: [
+    "Led a ground-up redesign focused on performance, accessibility, and maintainability.",
+    "Built a modular component and template system."
+  ],
+  highlights: [
+    "95+ Core Web Vitals across pages",
+    "Edge-rendered pages with fast TTFB",
+    "Accessible components with testing"
+  ],
+  images: [{ src: "/images/mesh-view.png", alt: "Mesh Desktop App Workspace View" }]
+  },
+  { 
+    slug: "martin-community-college", 
+    title: "Martin Community College", 
+    year: 2026, 
+    summary:
+      "Developed a full site redesign for Martin Community College.",
+    madeAt: "Springer Studios", 
+    builtWith: ["WordPress", "PHP", "JavaScript"], 
+    link: "https://www.martincc.edu", 
+    featured: false 
+  },
+  { 
+    slug: "robert-high-development", 
+    title: "Robert High Development", 
+    year: 2026, 
+    summary:
+      "Developed a new marketing and portfolio site for Robert High Development.",
+    madeAt: "Springer Studios", 
+    builtWith: ["WordPress", "PHP", "JavaScript"], 
+    link: "https://roberthighdevelopment.com", 
+    featured: false 
+  },
+  {
     slug: "atmosled",
     title: "Atmos LED Website",
     year: 2025,
@@ -63,7 +107,7 @@ export const projects: Project[] = [
     slug: "builtrite-storage-systems-website",
     title: "BuiltRite Storage Systems Website",
     year: 2025,
-    summary: "Built and deployed a new website for BuiltRite Storage Systems.",
+    summary: "Developed a new marketing website for BuiltRite Storage Systems.",
     madeAt: "Springer Studios",
     builtWith: ["WordPress", "PHP", "JavaScript"],
     link: "https://builtritestoragesystems.com",
@@ -74,7 +118,7 @@ export const projects: Project[] = [
     title: "CVCC Website Redesign",
     year: 2025,
     summary:
-      "Built and deployed a full site redesign for Catawba Valley Community College.",
+      "Built a full site redesign for Catawba Valley Community College.",
     madeAt: "Springer Studios",
     builtWith: ["WordPress" ,"PHP", "JavaScript", "mySQL"],
     link: "https://cvcc.edu/programs-of-study/",
@@ -90,39 +134,6 @@ export const projects: Project[] = [
     builtWith: ["TypeScript", "JavaScript", "React", "PostgreSQL"], 
     link: "https://main.dp9uus28slxd2.amplifyapp.com/", 
     featured: false 
-  },
-  {
-    slug: "mesh",
-    title: "Mesh",
-    year: 2026,
-    summary:
-      "Desktop app that gives Claude Code users visibility over their scattered AI coding projects and sessions: auto-discovers every project, renders session transcripts, resumes sessions in live embedded terminals, and generates LLM-powered activity analyses.",
-    madeAt: "Springer Studios",
-    builtWith: ["React", "TypeScript", "SQLite", "Electron", "Zustand"],
-    link: "https://github.com/itsrichardhaar/Mesh",
-    featured: true,
-    featuredOrder: 1,
-    description: [
-    "Led a ground-up redesign focused on performance, accessibility, and maintainability.",
-    "Built a modular component and template system."
-  ],
-  highlights: [
-    "95+ Core Web Vitals across pages",
-    "Edge-rendered pages with fast TTFB",
-    "Accessible components with testing"
-  ],
-  images: [{ src: "/images/Mesh-workspace.png", alt: "Mesh Desktop App Workspace View" }]
-  },
-  {
-    slug: "design-system",
-    title: "Design System",
-    year: 2023,
-    summary:
-      "Reusable components, design tokens, documentation adopted across teams.",
-    madeAt: "Springer Studios",
-    builtWith: ["Storybook", "TypeScript"],
-    link: "https://example.com",
-    featured: false, 
   },
   { 
     slug: "carteret-community-college", 
