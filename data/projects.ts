@@ -51,6 +51,17 @@ export const projects: Project[] = [
     featured: false 
   },
   { 
+    slug: "jta-ai-tool", 
+    title: "JTA AI Tool", 
+    year: 2026, 
+    summary:
+      "Contributed to the development of a custom Job Task Analysis AI chat tool for the EarthCntr. The tool helps NC Community Colleges identify the necessary knowledge, skills, and abilities to align curriculums with workforce needs.",
+    madeAt: "Springer Studios", 
+    builtWith: ["JavaScript", "Python", "Azure Foundry", "REST API"], 
+    link: "https://earthcntr.org/jta-ai-tool", 
+    featured: false 
+  },
+  { 
     slug: "robert-high-development", 
     title: "Robert High Development", 
     year: 2026, 
