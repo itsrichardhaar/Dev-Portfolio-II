@@ -50,16 +50,27 @@ export const projects: Project[] = [
     link: "https://www.martincc.edu", 
     featured: false 
   },
-  { 
-    slug: "jta-ai-tool", 
-    title: "JTA AI Tool", 
-    year: 2026, 
+  {
+    slug: "jta-ai-tool",
+    title: "JTA AI Tool",
+    year: 2026,
     summary:
       "Contributed to the development of a custom Job Task Analysis AI chat tool for the EarthCntr. The tool helps NC Community Colleges identify the necessary knowledge, skills, and abilities to align curriculums with workforce needs.",
-    madeAt: "Springer Studios", 
-    builtWith: ["JavaScript", "Python", "Azure Foundry", "REST API"], 
-    link: "https://earthcntr.org/jta-ai-tool", 
-    featured: false 
+    madeAt: "Springer Studios",
+    builtWith: ["JavaScript", "Python", "Azure Foundry", "REST API"],
+    link: "https://earthcntr.org/jta-ai-tool",
+    featured: true,
+    featuredOrder: 2,
+    description: [
+    "Led a ground-up redesign focused on performance, accessibility, and maintainability.",
+    "Built a modular component and template system."
+  ],
+  highlights: [
+    "95+ Core Web Vitals across pages",
+    "Edge-rendered pages with fast TTFB",
+    "Accessible components with testing"
+  ],
+  images: [{ src: "/images/jta-tool.png", alt: "JTA AI Tool" }]
   },
   { 
     slug: "robert-high-development", 
@@ -81,7 +92,7 @@ export const projects: Project[] = [
     builtWith: ["React", "TypeScript", "JavaScript", "Shopify", "Framer"],
     link: "https://atmosled.co/",
     featured: true,
-    featuredOrder: 2,
+    featuredOrder: 3,
     description: [
     "Led the development of this brand website.",
     "Built a reusable component and template system."
@@ -101,8 +112,8 @@ export const projects: Project[] = [
     madeAt: "Springer Studios",
     builtWith: ["React", "Three.js", "TypeScript", "JavaScript"],
     link: "https://built-rite-model-configurator-59t1.vercel.app",
-    featured: true,
-    featuredOrder: 3,
+    featured: false,
+    featuredOrder: 4,
     description: [
     "Led a ground-up redesign focused on performance, accessibility, and maintainability.",
     "Built a modular component and template system."
