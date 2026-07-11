@@ -120,7 +120,7 @@ export const projects: Project[] = [
     summary:
       "Built a full site redesign for Catawba Valley Community College.",
     madeAt: "Springer Studios",
-    builtWith: ["WordPress" ,"PHP", "JavaScript", "mySQL"],
+    builtWith: ["WordPress" ,"PHP", "JavaScript", "SQL"],
     link: "https://cvcc.edu/programs-of-study/",
     featured: false, 
   },
@@ -316,7 +316,7 @@ export const projects: Project[] = [
     summary:
       "Built and deployed a full redesign for Bladen Community College.",
     madeAt: "Springer Studios", 
-    builtWith: ["WordPress", "PHP", "JavaScript", "mySQL"], 
+    builtWith: ["WordPress", "PHP", "JavaScript", "SQL"], 
     link: "https://www.bladencc.edu", 
     featured: false 
   },
@@ -327,7 +327,7 @@ export const projects: Project[] = [
   summary:
     "Built and deployed a full redesign for James Sprunt Community College.",
   madeAt: "Springer Studios",
-  builtWith: ["WordPress", "PHP", "JavaScript", "mySQL"],
+  builtWith: ["WordPress", "PHP", "JavaScript", "SQL"],
   link: "https://jamessprunt.edu", 
   featured: false,
 },
@@ -338,7 +338,7 @@ export const projects: Project[] = [
     summary:
       "Collaborated on an overhaul of the Programs of Study structure and Course Registration API.",
     madeAt: "Springer Studios", 
-    builtWith: ["WordPress", "PHP", "JavaScript", "mySQL", "Rest API"], 
+    builtWith: ["WordPress", "PHP", "JavaScript", "SQL", "REST API"], 
     link: "https://cfcc.edu/", 
     featured: false 
   },
@@ -349,7 +349,7 @@ export const projects: Project[] = [
     summary:
       "Built and deployed a full redesign for Trask Land Company.",
     madeAt: "Springer Studios", 
-    builtWith: ["WordPress", "PHP"], 
+    builtWith: ["WordPress", "PHP", "JavaScript"], 
     link: "https://trasklandco.com", 
     featured: false 
   },
@@ -371,7 +371,7 @@ export const projects: Project[] = [
     summary:
       "Built and deployed a full redesign for McCord Contractors Inc.",
     madeAt: "HighClick Media", 
-    builtWith: ["WordPress", "PHP"], 
+    builtWith: ["WordPress", "PHP", "JavaScript"], 
     link: "https://mccordcontractors.com", 
     featured: false 
   },
@@ -382,7 +382,7 @@ export const projects: Project[] = [
     madeAt: "HighClick Media", 
     summary:
       "Built and deployed a full redesign for Silvercare.",
-    builtWith: ["WordPress", "PHP"], 
+    builtWith: ["WordPress", "PHP", "JavaScript"], 
     link: "https://silvercareweb.com", 
     featured: false 
   },
@@ -393,7 +393,7 @@ export const projects: Project[] = [
     summary:
       "Built and deployed a full redesign for Edge Dental Solutions.",
     madeAt: "HighClick Media", 
-    builtWith: ["WordPress", "PHP"], 
+    builtWith: ["WordPress", "PHP", "JavaScript"], 
     link: "https://edgedentalsolutions.com", 
     featured: false 
   },
@@ -404,7 +404,7 @@ export const projects: Project[] = [
     summary:
       "Built and deployed a full redesign for TD Goodwin Construction.",
     madeAt: "HighClick Media", 
-    builtWith: ["WordPress", "PHP"], 
+    builtWith: ["WordPress", "PHP", "JavaScript"], 
     link: "https://www.tdgoodwin.com", 
     featured: false 
   },
@@ -415,7 +415,7 @@ export const projects: Project[] = [
     summary:
       "Built and deployed a site for EncounterWorks EHR.",
     madeAt: "HighClick Media", 
-    builtWith: ["WordPress", "PHP"], 
+    builtWith: ["WordPress", "PHP", "JavaScript"], 
     link: "https://encounterworks.com/", 
     featured: false 
   },
@@ -423,7 +423,7 @@ export const projects: Project[] = [
     slug: "hidden-talents-2018", 
     title: "Hidden Talents", 
     year: 2018, 
-    madeAt: "UNC Coding Bootcamp", 
+    madeAt: "UNC Coding Project", 
     builtWith: ["React", "JavaScript", "Node.js"], 
     link: "https://github.com/itsrichardhaar/Hidden-Talents", 
     featured: false 
@@ -432,7 +432,7 @@ export const projects: Project[] = [
     slug: "know-your-vote-2018", 
     title: "Know Your Vote", 
     year: 2018, 
-    madeAt: "UNC Coding Bootcamp", 
+    madeAt: "UNC Coding Project", 
     builtWith: ["React", "JavaScript", "Node.js"], 
     link: "https://github.com/merinogeospatial/know-your-vote", 
     featured: false 
@@ -441,7 +441,7 @@ export const projects: Project[] = [
     slug: "hijack-2018", 
     title: "HiJack", 
     year: 2018, 
-    madeAt: "UNC Coding Bootcamp", 
+    madeAt: "UNC Coding Project", 
     builtWith: ["React", "JavaScript", "Node.js"], 
     link: "https://github.com/itsrichardhaar/HiJack/tree/master/Alice", 
     featured: false 
@@ -450,7 +450,7 @@ export const projects: Project[] = [
     slug: "trivia-game-2018", 
     title: "Trivia Game", 
     year: 2018, 
-    madeAt: "UNC Coding Bootcamp", 
+    madeAt: "UNC Coding Project", 
     builtWith: ["JavaScript"], 
     link: "https://github.com/itsrichardhaar/Homework-5/", 
     featured: false 
@@ -459,7 +459,7 @@ export const projects: Project[] = [
     slug: "bamazon-app-2018", 
     title: "Bamazon App", 
     year: 2018, 
-    madeAt: "UNC Coding Bootcamp", 
+    madeAt: "UNC Coding Project", 
     builtWith: ["Node.js"], 
     link: "https://github.com/itsrichardhaar/bamazon-app", 
     featured: false 
@@ -468,7 +468,7 @@ export const projects: Project[] = [
     slug: "liri-node-app-2018", 
     title: "Liri Node App", 
     year: 2018, 
-    madeAt: "UNC Coding Bootcamp", 
+    madeAt: "UNC Coding Project", 
     builtWith: ["Node.js"], 
     link: "https://github.com/itsrichardhaar/liri-node-app", 
     featured: false 
@@ -477,7 +477,7 @@ export const projects: Project[] = [
     slug: "mongo-scraper-2018", 
     title: "Mongo Scraper", 
     year: 2018, 
-    madeAt: "UNC Coding Bootcamp", 
+    madeAt: "UNC Coding Project", 
     builtWith: ["JavaScript"], 
     link: "https://github.com/itsrichardhaar/mongo-scraper", 
     featured: false 
