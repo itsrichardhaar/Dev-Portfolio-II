@@ -22,7 +22,7 @@ export const projects: Project[] = [
     title: "Mesh",
     year: 2026,
     summary:
-      "Created a desktop app that gives Claude Code users visibility over their scattered AI coding sessions: auto-discovers every project, renders session transcripts, resumes sessions in live embedded terminals, and generates LLM-powered activity analyses.",
+      "Created a Mac OS desktop app that gives Claude Code users visibility over their scattered AI coding sessions: auto-discovers every project, provides token usage & cost analytics, renders session transcripts, resumes claude sessions in live embedded terminals, and generates LLM-powered project and session analyses.",
     madeAt: "Springer Studios",
     builtWith: ["React", "TypeScript", "SQLite", "Electron", "Zustand"],
     link: "https://github.com/itsrichardhaar/Mesh",
@@ -55,7 +55,7 @@ export const projects: Project[] = [
     title: "JTA AI Tool",
     year: 2026,
     summary:
-      "Contributed to the development of a custom Job Task Analysis AI chat tool for the EarthCntr. The tool helps NC Community Colleges identify the necessary knowledge, skills, and abilities to align curriculums with workforce needs.",
+      "Contributed to the development of a custom Job Task Analysis AI chat tool for the EarthCntr. The tool helps NC Community Colleges leaders identify the necessary knowledge, skills, and abilities to align curriculums with workforce needs.",
     madeAt: "Springer Studios",
     builtWith: ["JavaScript", "Python", "Azure Foundry", "REST API"],
     link: "https://earthcntr.org/jta-ai-tool",
