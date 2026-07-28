@@ -37,7 +37,7 @@ export const projects: Project[] = [
     "Edge-rendered pages with fast TTFB",
     "Accessible components with testing"
   ],
-  images: [{ src: "/images/mesh-view.png", alt: "Mesh Desktop App Workspace View" }]
+  images: [{ src: "/images/mesh-dashboard.png", alt: "Mesh Desktop App Workspace View" }]
   },
   { 
     slug: "martin-community-college", 
