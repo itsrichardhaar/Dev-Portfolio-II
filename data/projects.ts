@@ -22,7 +22,7 @@ export const projects: Project[] = [
     title: "Mesh",
     year: 2026,
     summary:
-      "Created a Mac OS desktop app that gives Claude Code users visibility over their scattered AI coding sessions: auto-discovers every project, provides token usage & cost analytics, renders session transcripts, resumes claude sessions in live embedded terminals, and generates LLM-powered project and session analyses.",
+      "Created a Mac OS desktop app that gives Claude Code users visibility over their scattered AI coding sessions: auto-discovers every project, provides token usage & cost analytics, renders session transcripts, resumes claude sessions in live embedded terminals, and generates LLM-powered project analyses.",
     madeAt: "Springer Studios",
     builtWith: ["React", "TypeScript", "SQLite", "Electron", "Zustand"],
     link: "https://github.com/itsrichardhaar/Mesh",

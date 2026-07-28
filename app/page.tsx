@@ -170,7 +170,7 @@ export default function HomePage() {
                     "Automated manual, labor-heavy business process with LLM APIs using Claude Code and Open AI Codex, replacing repetitive human steps and reducing turnaround time.",
                     "Build, style, and ship high-quality websites, mobile apps, and design systems.",
                     "Served as technical lead for client onboarding, implementations and training, gathered technical requirements from stakeholders and translated them to product managers, designers and other engineers.",
-                    "Engineered an Mac OS, AI workspace desktop application using TypeScript, React, SQL, HTML, CSS, integrated with Claude Code and Open AI Codex SDKs to organize code projects, agent sessions, manage agent orchestration, search session history, and resume past sessions in CLI.",
+                    "Engineered an AI workspace desktop application using TypeScript, React, SQL, HTML, CSS, integrated with Claude Code and Open AI Codex SDKs to organize code projects, agent sessions, manage agent orchestration, search session history, and resume past sessions in CLI.",
                   ],
                   href: "https://springerstudios.com",
                   external: true,
