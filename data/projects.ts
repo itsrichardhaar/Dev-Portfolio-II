@@ -18,6 +18,28 @@ export type Project = {
 
 export const projects: Project[] = [
   {
+    slug: "kenii-catalog",
+    title: "Kenii Catalog",
+    year: 2026,
+    summary:
+      "Contributed to the development of Kenii Catalog, a self-hosted college catalog application that manages curriculum programs, credentials, and courses.",
+    madeAt: "Springer Studios",
+    builtWith: ["React", "TypeScript", "JavaScript", "SQLite", "PHP", "Node.js"],
+    link: "https://kenii.app",
+    featured: false,
+    featuredOrder: 1,
+    description: [
+    "Led a ground-up redesign focused on performance, accessibility, and maintainability.",
+    "Built a modular component and template system."
+  ],
+  highlights: [
+    "95+ Core Web Vitals across pages",
+    "Edge-rendered pages with fast TTFB",
+    "Accessible components with testing"
+  ],
+  images: [{ src: "/images/kenii-dashboard.png", alt: "Kenii Catalog Dashboard" }]
+  },
+  {
     slug: "mesh",
     title: "Mesh",
     year: 2026,
