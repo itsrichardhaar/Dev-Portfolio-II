@@ -193,7 +193,7 @@ export default function HomePage() {
 
             <div className="mt-8">
               <Link
-                href="/resume.pdf"
+                href="/Richard_Haar_Resume.pdf"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="link-underline text-sm font-medium text-copy no-underline"
